@@ -1,0 +1,1064 @@
+{
+  "verified_utc": "2026-10-26T14:41:23.892021+00:00",
+  "data_files": 58,
+  "raw_rows": 365558,
+  "normalized_rows": 365509,
+  "duplicate_rows_removed": 49,
+  "downloaded_file_hashes_verified": 70,
+  "python_files_syntax_checked": 9,
+  "training_executed": false,
+  "evaluation_executed": false,
+  "runtime_tests_executed": false,
+  "checks": [
+    "CSV schema, timestamps, missing values, anomaly-window coverage, split feasibility",
+    "all downloaded SHA-256 hashes",
+    "Python parse/compile without execution",
+    "no machine-specific paths in application Python files"
+  ],
+  "series": [
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "ccb7743ac2de8ca110db4af796d11ba31a23ad448a28e353a935c15f637756bc",
+      "series": "artificialNoAnomaly/art_daily_no_noise.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "662ff0a295b81eb0ff8e81116a54a497cd6f6b07c19c7a5ea72cce494913ce62",
+      "series": "artificialNoAnomaly/art_daily_perfect_square_wave.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "c4b304229f69f108eaa024fb2406fcd4510c5c5d95cd0053e2da6989682e4e6d",
+      "series": "artificialNoAnomaly/art_daily_small_noise.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "1cc10761ddd6d55fb5f0d9cfc73610416abbb120ee14bb65eff288509a463397",
+      "series": "artificialNoAnomaly/art_flatline.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "ad455adeaf06852222500955f2aefe6bd389cc762ef68e7102ee543209c8607f",
+      "series": "artificialNoAnomaly/art_noisy.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "ea5df125947e9ee2b977ac3d341f3c2a029588862af97cae4a654fc56e838702",
+      "series": "artificialWithAnomaly/art_daily_flatmiddle.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "4af31802e87dff4b4ba3ceb21714ba9d905f7888e1f53d47cc6dd4f856f9debc",
+      "series": "artificialWithAnomaly/art_daily_jumpsdown.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "f79f92b93ee4f9c10e2dc552505e8880b0c618639ed5e0f9816e044b75c26456",
+      "series": "artificialWithAnomaly/art_daily_jumpsup.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "65c85d1834376ed5e622f01721d478609577ea0df0a067c5a5ebe5edea03b077",
+      "series": "artificialWithAnomaly/art_daily_nojump.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "0959d8871d5c1a3fc3120fb7421e4ef113fffb434af2889085b52aebdb69360c",
+      "series": "artificialWithAnomaly/art_increase_spike_density.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "99f7130e54c7c3e818df8e3bdc0974cd241914bb14a10a9c3fa7c1374125d224",
+      "series": "artificialWithAnomaly/art_load_balancer_spikes.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 1624,
+      "rows": 1623,
+      "duplicate_rows_removed": 1,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 5,
+      "sha256": "d869ab165254f3ee77ee21fd9fab2be1d07c1f80b8133cf01bbaf2d768c2ac64",
+      "series": "realAdExchange/exchange-2_cpc_results.csv",
+      "split_points": [
+        811,
+        1136,
+        1379
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 1624,
+      "rows": 1623,
+      "duplicate_rows_removed": 1,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 5,
+      "sha256": "1f01b9438566d2fe1ac446faa202a395ac86db9240a1955bc1f118c8eada2a19",
+      "series": "realAdExchange/exchange-2_cpm_results.csv",
+      "split_points": [
+        811,
+        1136,
+        1379
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 1538,
+      "rows": 1538,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 64,
+      "sha256": "e70b24dba107a2589657cb3feb9ca5605b4f3f7de49ff445f32f5991bc0bdbe5",
+      "series": "realAdExchange/exchange-3_cpc_results.csv",
+      "split_points": [
+        769,
+        1076,
+        1307
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 1538,
+      "rows": 1538,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 64,
+      "sha256": "74d354a94fb1730e14b469c7c1c6e99c2ad69af53afdb85f65220bd3cf01ce4a",
+      "series": "realAdExchange/exchange-3_cpm_results.csv",
+      "split_points": [
+        769,
+        1076,
+        1307
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 1643,
+      "rows": 1643,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 4,
+      "sha256": "d4c13abd6f28594dc446f22106562ebe917fdbe76170f60a500c2a402ecc09e2",
+      "series": "realAdExchange/exchange-4_cpc_results.csv",
+      "split_points": [
+        821,
+        1150,
+        1396
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 1643,
+      "rows": 1643,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 4,
+      "sha256": "4e5c955b632145b77b93fba4a5e3bf615d47e00416e17091d64e05ae109c760e",
+      "series": "realAdExchange/exchange-4_cpm_results.csv",
+      "split_points": [
+        821,
+        1150,
+        1396
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "ab446fbd8b9f37507eb2fdb06315826d8daeef02e241133ce06e0ee571ba53d9",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "8942e498de7b40f1b4a6d802755592c09b8fb73ce8f658763a09cb9ea1ea94ac",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "01613e6f632d067f11a5dfd40a188b0789752b388d9bc77a398bd06333878a76",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "90ceabd570b449241ee24ff8a116a793979b7671ce4490707311bfea0e0aae1f",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 2,
+      "sha256": "d768419037c9db269343822957314f57ee21a7d9a4d41df2add0d1ba45ba84de",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 2,
+      "sha256": "749a15c2e1a4543c21fee9cbf3338cd8a7ed5f5f8a1308b9b099b06c2c66e66b",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "d936cea74682ed43ac96b778352d7de294c0b0c168f4a7e6817162346cdb28c1",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 0
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "f3433f8171f4dcea86c0c7af9996d0f166f812fa0f4567f1d5cd85d2d2cd69b4",
+      "series": "realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 4730,
+      "rows": 4719,
+      "duplicate_rows_removed": 11,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 2,
+      "sha256": "ce3d6c6a652ed7c31a6dd3727a36e128fcac6fb2381c63267ad0fbc02eccd9df",
+      "series": "realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
+      "split_points": [
+        2359,
+        3303,
+        4011
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "a0e734a66098bb81833835f0839dadafbc8ae829c51494670ee8849e46eb5b63",
+      "series": "realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 2,
+      "sha256": "39104b08f2e0a673b5137eb7681897fcadf0955fedf565740a6a94edc63a81a4",
+      "series": "realAWSCloudwatch/ec2_network_in_257a54.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4730,
+      "rows": 4719,
+      "duplicate_rows_removed": 11,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 2,
+      "sha256": "c27ef93f582af63bf42e80d804764cbe64ae987620f3cfab5477d6ebb3c6157e",
+      "series": "realAWSCloudwatch/ec2_network_in_5abac7.csv",
+      "split_points": [
+        2359,
+        3303,
+        4011
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 8,
+      "sha256": "74c26574a01ca9fb89dddb5021e2e13c3a93eb25dc640438a9acb1ceb00f1021",
+      "series": "realAWSCloudwatch/elb_request_count_8c0756.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4621,
+      "rows": 4621,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "86a0abe9d58e376858d2fd4f4a438f1997e24c64a09e5af03accd4e1b372ac47",
+      "series": "realAWSCloudwatch/grok_asg_anomaly.csv",
+      "split_points": [
+        2310,
+        3234,
+        3927
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 1243,
+      "rows": 1243,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "f115fbe6542159eed5612445bfa620708a28ab6b41349d1432bb15c3a3b8414d",
+      "series": "realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+      "split_points": [
+        621,
+        870,
+        1056
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 1,
+      "sha256": "d5df979ef85928769a016cd0f935919d8c2a113926e21e1eb3a5001d688760e2",
+      "series": "realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4032,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "6b712b922ab3b3404c5a629d64a570c390c99471ee8b9b0ff7665f553fda92c1",
+      "series": "realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
+      "split_points": [
+        2016,
+        2822,
+        3427
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 7267,
+      "rows": 7267,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 3600.0,
+      "irregular_intervals": 10,
+      "sha256": "230b68ccca20f59d562afd5d24ad52939c9b784386bed0054018358bf9120581",
+      "series": "realKnownCause/ambient_temperature_system_failure.csv",
+      "split_points": [
+        3633,
+        5086,
+        6176
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 18050,
+      "rows": 18050,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "58ba65dc0737cfbac11b51514476d50c438d44011232144bb8d93f392df58f9f",
+      "series": "realKnownCause/cpu_utilization_asg_misconfiguration.csv",
+      "split_points": [
+        9025,
+        12635,
+        15342
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 4032,
+      "rows": 4021,
+      "duplicate_rows_removed": 11,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 3,
+      "sha256": "98378580aa80157e057c61d59d81daddccc6c65a2c0c800e3f01f603b8215c3f",
+      "series": "realKnownCause/ec2_request_latency_system_failure.csv",
+      "split_points": [
+        2010,
+        2814,
+        3417
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 22695,
+      "rows": 22683,
+      "duplicate_rows_removed": 12,
+      "timestamps_reordered": true,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "92bf5b87fc7f9bba8ca0b7ec63ccaac8cb4a1371a258e8c29a10ae9c018d82a4",
+      "series": "realKnownCause/machine_temperature_system_failure.csv",
+      "split_points": [
+        11341,
+        15878,
+        19280
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 10320,
+      "rows": 10320,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 1800.0,
+      "irregular_intervals": 0,
+      "sha256": "d8fa6f7f0734bf5c8be12c52a94e20a82664c397d9dec4449156bd453d32856d",
+      "series": "realKnownCause/nyc_taxi.csv",
+      "split_points": [
+        5160,
+        7223,
+        8772
+      ],
+      "labeled_events": 5
+    },
+    {
+      "input_rows": 1882,
+      "rows": 1882,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 91,
+      "sha256": "47b110baa8e3636574c1033dda1cce780873647fab58223d159d4fee6f180e86",
+      "series": "realKnownCause/rogue_agent_key_hold.csv",
+      "split_points": [
+        941,
+        1317,
+        1599
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 5315,
+      "rows": 5315,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 10,
+      "sha256": "9797cfef477c13306f7a33874ab4d6cf700f8f2c7e5825a2a5bc02004370909a",
+      "series": "realKnownCause/rogue_agent_key_updown.csv",
+      "split_points": [
+        2657,
+        3720,
+        4517
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 2380,
+      "rows": 2380,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 625,
+      "sha256": "cd357d7820d675074270fd976d4af1fc1e7854ecb764783028cbcb18d980c91d",
+      "series": "realTraffic/occupancy_6005.csv",
+      "split_points": [
+        1190,
+        1666,
+        2023
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 2500,
+      "rows": 2499,
+      "duplicate_rows_removed": 1,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 589,
+      "sha256": "5663a8122a300360eb51fbbd0f21706da05af1af55262926d6a226bb6d071704",
+      "series": "realTraffic/occupancy_t4013.csv",
+      "split_points": [
+        1249,
+        1749,
+        2124
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 2500,
+      "rows": 2500,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 677,
+      "sha256": "7976e7596cd1e579696c737576e96a26fe041484472ed7d0a463ce2b094d7aa7",
+      "series": "realTraffic/speed_6005.csv",
+      "split_points": [
+        1250,
+        1750,
+        2125
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 1127,
+      "rows": 1127,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 391,
+      "sha256": "15ba994384730cb5a2e6818f17ded1430b40d92eb7a08e5b1a48a445c8c350f6",
+      "series": "realTraffic/speed_7578.csv",
+      "split_points": [
+        563,
+        788,
+        957
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 2495,
+      "rows": 2494,
+      "duplicate_rows_removed": 1,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 590,
+      "sha256": "fa5532d6f7db36cadc73e657fd4dfef05cb1ec44d4010243b314d3f1bbd6a7b5",
+      "series": "realTraffic/speed_t4013.csv",
+      "split_points": [
+        1247,
+        1745,
+        2119
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 2500,
+      "rows": 2500,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 600.0,
+      "irregular_intervals": 909,
+      "sha256": "38e70e9ead8227fd023bff6e93247d5bc01ee008f781b921a156962419b399bb",
+      "series": "realTraffic/TravelTime_387.csv",
+      "split_points": [
+        1250,
+        1750,
+        2125
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 2162,
+      "rows": 2162,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 600.0,
+      "irregular_intervals": 1372,
+      "sha256": "7c174adfc457b201cd111d60688f7ec37eb7201c8080790dc41eeff477bd7345",
+      "series": "realTraffic/TravelTime_451.csv",
+      "split_points": [
+        1081,
+        1513,
+        1837
+      ],
+      "labeled_events": 1
+    },
+    {
+      "input_rows": 15902,
+      "rows": 15902,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "826f5cf404c2890784a7824f7102fd00cb134a4948e12e44ec320d095cbbc217",
+      "series": "realTweets/Twitter_volume_AAPL.csv",
+      "split_points": [
+        7951,
+        11131,
+        13516
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 15831,
+      "rows": 15831,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "234f5e63f19a62720dfb7ccfd6ecc8349b94d93b33ef8aafbdb17edda0b654f3",
+      "series": "realTweets/Twitter_volume_AMZN.csv",
+      "split_points": [
+        7915,
+        11081,
+        13456
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 15902,
+      "rows": 15902,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "e7133bf26479623d58fc7367107aea1cd7df6020420dece48b0eee4d26cdb28a",
+      "series": "realTweets/Twitter_volume_CRM.csv",
+      "split_points": [
+        7951,
+        11131,
+        13516
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 15853,
+      "rows": 15853,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "f0bdc89cba3dd2265b47069187c750eeae18ef48f76f86067ee26ea1af9c3114",
+      "series": "realTweets/Twitter_volume_CVS.csv",
+      "split_points": [
+        7926,
+        11097,
+        13475
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 15833,
+      "rows": 15833,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "a7096bd646759486bda6796b5600cd33a4590f0842bf274ea7acba001b3ba591",
+      "series": "realTweets/Twitter_volume_FB.csv",
+      "split_points": [
+        7916,
+        11083,
+        13458
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 15842,
+      "rows": 15842,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "3a39cc23d1ff6a0f234b55298d0c46c21d2e94ddb81a0dad9e1e46e3aaa9ec90",
+      "series": "realTweets/Twitter_volume_GOOG.csv",
+      "split_points": [
+        7921,
+        11089,
+        13465
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 15893,
+      "rows": 15893,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "4309bd56d28ddcbdc168e207da9717395fa2e9f74dba41fa768e0f7da8a116fa",
+      "series": "realTweets/Twitter_volume_IBM.csv",
+      "split_points": [
+        7946,
+        11125,
+        13509
+      ],
+      "labeled_events": 2
+    },
+    {
+      "input_rows": 15851,
+      "rows": 15851,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "f3aa8157043c6569911031535bd1f7a73b428b5a2d95238d79b9d5b88ceebbd2",
+      "series": "realTweets/Twitter_volume_KO.csv",
+      "split_points": [
+        7925,
+        11095,
+        13473
+      ],
+      "labeled_events": 3
+    },
+    {
+      "input_rows": 15858,
+      "rows": 15858,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "18d2804d6a5dae63fe711baaba9242dce38a32bfade3dcdee1d8a7c1a866e41b",
+      "series": "realTweets/Twitter_volume_PFE.csv",
+      "split_points": [
+        7929,
+        11100,
+        13479
+      ],
+      "labeled_events": 4
+    },
+    {
+      "input_rows": 15866,
+      "rows": 15866,
+      "duplicate_rows_removed": 0,
+      "timestamps_reordered": false,
+      "timestamp_policy": "stable_sort_keep_first",
+      "missing_rows": 0,
+      "median_interval_seconds": 300.0,
+      "irregular_intervals": 0,
+      "sha256": "be50f06bbb9d020f37653c8c5cf19af63f77aa0019d8cf10849d91f4af455af4",
+      "series": "realTweets/Twitter_volume_UPS.csv",
+      "split_points": [
+        7933,
+        11106,
+        13486
+      ],
+      "labeled_events": 5
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 82,
+      "sha256": "f7307dc1c3fd76fc008aa805bd4c27ba5e88d251a8597837592d13e20c2998cb"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "8dd1c0b3e46471ab63a000633ab3764a4fe1b87c9efa6d2be43145967eb86e26"
+    },
+    {
+      "path": "DATA_VALIDATION.json",
+      "bytes": 32197,
+      "sha256": "7cdae726e8d2c4d64e1f632bcf009af3374b1fb8713d859669465bb785f397ae"
+    },
+    {
+      "path": "METHODOLOGY.md",
+      "bytes": 10298,
+      "sha256": "8e5f2730e9a1e73192ae0192f7426cbea557643b586893e43c1dbbea0c1cee5f"
+    },
+    {
+      "path": "PREPARATION_STATUS.md",
+      "bytes": 1430,
+      "sha256": "5c120a1e4081a57e35aa6c56f86ad8b9a9ec8903c4ba491c0c4632a10339207f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9135,
+      "sha256": "a2fbd9e79d8711979bf73b48a38bf3a0657895904ca8a4e2537fed788025c6db"
+    },
+    {
+      "path": "config.json",
+      "bytes": 617,
+      "sha256": "3559279122542635e16b5407e1d3211c5dd0a801d03c08944ce298a71c8e9200"
+    },
+    {
+      "path": "data/nab/LICENSE.txt",
+      "bytes": 1056,
+      "sha256": "0a0b4d0b10cb1f7ed9ab2993ef93defc03447e6eba9daca1315dd32dae4877e3"
+    },
+    {
+      "path": "data/nab/data/README.md",
+      "bytes": 2931,
+      "sha256": "1d32963e44a52323b44affff374a1222ebe5ef19ef8f7f6c6fd7a747aa52db30"
+    },
+    {
+      "path": "data/nab/data/artificialNoAnomaly/art_daily_no_noise.csv",
+      "bytes": 116776,
+      "sha256": "ccb7743ac2de8ca110db4af796d11ba31a23ad448a28e353a935c15f637756bc"
+    },
+    {
+      "path": "data/nab/data/artificialNoAnomaly/art_daily_perfect_square_wave.csv",
+      "bytes": 100816,
+      "sha256": "662ff0a295b81eb0ff8e81116a54a497cd6f6b07c19c7a5ea72cce494913ce62"
+    },
+    {
+      "path": "data/nab/data/artificialNoAnomaly/art_daily_small_noise.csv",
+      "bytes": 140187,
+      "sha256": "c4b304229f69f108eaa024fb2406fcd4510c5c5d95cd0053e2da6989682e4e6d"
+    },
+    {
+      "path": "data/nab/data/artificialNoAnomaly/art_flatline.csv",
+      "bytes": 100816,
+      "sha256": "1cc10761ddd6d55fb5f0d9cfc73610416abbb120ee14bb65eff288509a463397"
+    },
+    {
+      "path": "data/nab/data/artificialNoAnomaly/art_noisy.csv",
+      "bytes": 140916,
+      "sha256": "ad455adeaf06852222500955f2aefe6bd389cc762ef68e7102ee543209c8607f"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_daily_flatmiddle.csv",
+      "bytes": 140292,
+      "sha256": "ea5df125947e9ee2b977ac3d341f3c2a029588862af97cae4a654fc56e838702"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_daily_jumpsdown.csv",
+      "bytes": 140814,
+      "sha256": "4af31802e87dff4b4ba3ceb21714ba9d905f7888e1f53d47cc6dd4f856f9debc"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_daily_jumpsup.csv",
+      "bytes": 140548,
+      "sha256": "f79f92b93ee4f9c10e2dc552505e8880b0c618639ed5e0f9816e044b75c26456"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_daily_nojump.csv",
+      "bytes": 140478,
+      "sha256": "65c85d1834376ed5e622f01721d478609577ea0df0a067c5a5ebe5edea03b077"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_increase_spike_density.csv",
+      "bytes": 96869,
+      "sha256": "0959d8871d5c1a3fc3120fb7421e4ef113fffb434af2889085b52aebdb69360c"
+    },
+    {
+      "path": "data/nab/data/artificialWithAnomaly/art_load_balancer_spikes.csv",
+      "bytes": 101603,
+      "sha256": "99f7130e54c7c3e818df8e3bdc0974cd241914bb14a10a9c3fa7c1374125d224"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+      "bytes": 105367,
+      "sha256": "ab446fbd8b9f37507eb2fdb06315826d8daeef02e241133ce06e0ee571ba53d9"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
+      "bytes": 116041,
+      "sha256": "8942e498de7b40f1b4a6d802755592c09b8fb73ce8f658763a09cb9ea1ea94ac"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+      "bytes": 119229,
+      "sha256": "01613e6f632d067f11a5dfd40a188b0789752b388d9bc77a398bd06333878a76"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
+      "bytes": 106007,
+      "sha256": "90ceabd570b449241ee24ff8a116a793979b7671ce4490707311bfea0e0aae1f"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
+      "bytes": 113675,
+      "sha256": "d768419037c9db269343822957314f57ee21a7d9a4d41df2add0d1ba45ba84de"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
+      "bytes": 116980,
+      "sha256": "749a15c2e1a4543c21fee9cbf3338cd8a7ed5f5f8a1308b9b099b06c2c66e66b"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
+      "bytes": 104962,
+      "sha256": "d936cea74682ed43ac96b778352d7de294c0b0c168f4a7e6817162346cdb28c1"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
+      "bytes": 115788,
+      "sha256": "f3433f8171f4dcea86c0c7af9996d0f166f812fa0f4567f1d5cd85d2d2cd69b4"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
+      "bytes": 116626,
+      "sha256": "ce3d6c6a652ed7c31a6dd3727a36e128fcac6fb2381c63267ad0fbc02eccd9df"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
+      "bytes": 101626,
+      "sha256": "a0e734a66098bb81833835f0839dadafbc8ae829c51494670ee8849e46eb5b63"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_network_in_257a54.csv",
+      "bytes": 117236,
+      "sha256": "39104b08f2e0a673b5137eb7681897fcadf0955fedf565740a6a94edc63a81a4"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/ec2_network_in_5abac7.csv",
+      "bytes": 120827,
+      "sha256": "c27ef93f582af63bf42e80d804764cbe64ae987620f3cfab5477d6ebb3c6157e"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/elb_request_count_8c0756.csv",
+      "bytes": 101052,
+      "sha256": "74c26574a01ca9fb89dddb5021e2e13c3a93eb25dc640438a9acb1ceb00f1021"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/grok_asg_anomaly.csv",
+      "bytes": 131065,
+      "sha256": "86a0abe9d58e376858d2fd4f4a438f1997e24c64a09e5af03accd4e1b372ac47"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+      "bytes": 37339,
+      "sha256": "f115fbe6542159eed5612445bfa620708a28ab6b41349d1432bb15c3a3b8414d"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
+      "bytes": 117806,
+      "sha256": "d5df979ef85928769a016cd0f935919d8c2a113926e21e1eb3a5001d688760e2"
+    },
+    {
+      "path": "data/nab/data/realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
+      "bytes": 113599,
+      "sha256": "6b712b922ab3b3404c5a629d64a570c390c99471ee8b9b0ff7665f553fda92c1"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-2_cpc_results.csv",
+      "bytes": 58887,
+      "sha256": "d869ab165254f3ee77ee21fd9fab2be1d07c1f80b8133cf01bbaf2d768c2ac64"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-2_cpm_results.csv",
+      "bytes": 58313,
+      "sha256": "1f01b9438566d2fe1ac446faa202a395ac86db9240a1955bc1f118c8eada2a19"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-3_cpc_results.csv",
+      "bytes": 55474,
+      "sha256": "e70b24dba107a2589657cb3feb9ca5605b4f3f7de49ff445f32f5991bc0bdbe5"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-3_cpm_results.csv",
+      "bytes": 54949,
+      "sha256": "74d354a94fb1730e14b469c7c1c6e99c2ad69af53afdb85f65220bd3cf01ce4a"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-4_cpc_results.csv",
+      "bytes": 60212,
+      "sha256": "d4c13abd6f28594dc446f22106562ebe917fdbe76170f60a500c2a402ecc09e2"
+    },
+    {
+      "path": "data/nab/data/realAdExchange/exchange-4_cpm_results.csv",
+      "bytes": 58931,
+      "sha256": "4e5c955b632145b77b93fba4a5e3bf615d47e00416e17091d64e05ae109c760e"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/ambient_temperature_system_failure.csv",
+      "bytes": 233321,
+      "sha256": "230b68ccca20f59d562afd5d24ad52939c9b784386bed0054018358bf9120581"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/cpu_utilization_asg_misconfiguration.csv",
+      "bytes": 539274,
+      "sha256": "58ba65dc0737cfbac11b51514476d50c438d44011232144bb8d93f392df58f9f"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/ec2_request_latency_system_failure.csv",
+      "bytes": 123428,
+      "sha256": "98378580aa80157e057c61d59d81daddccc6c65a2c0c800e3f01f603b8215c3f"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/machine_temperature_system_failure.csv",
+      "bytes": 732223,
+      "sha256": "92bf5b87fc7f9bba8ca0b7ec63ccaac8cb4a1371a258e8c29a10ae9c018d82a4"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/nyc_taxi.csv",
+      "bytes": 265771,
+      "sha256": "d8fa6f7f0734bf5c8be12c52a94e20a82664c397d9dec4449156bd453d32856d"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/rogue_agent_key_hold.csv",
+      "bytes": 55527,
+      "sha256": "47b110baa8e3636574c1033dda1cce780873647fab58223d159d4fee6f180e86"
+    },
+    {
+      "path": "data/nab/data/realKnownCause/rogue_agent_key_updown.csv",
+      "bytes": 138333,
+      "sha256": "9797cfef477c13306f7a33874ab4d6cf700f8f2c7e5825a2a5bc02004370909a"
+    },
+    {
+      "path": "data/nab/data/realTraffic/TravelTime_387.csv",
+      "bytes": 59846,
+      "sha256": "38e70e9ead8227fd023bff6e93247d5bc01ee008f781b921a156962419b399bb"
+    },
+    {
+      "path": "data/nab/data/realTraffic/TravelTime_451.csv",
+      "bytes": 51918,
+      "sha256": "7c174adfc457b201cd111d60688f7ec37eb7201c8080790dc41eeff477bd7345"
+    },
+    {
+      "path": "data/nab/data/realTraffic/occupancy_6005.csv",
+      "bytes": 59122,
+      "sha256": "cd357d7820d675074270fd976d4af1fc1e7854ecb764783028cbcb18d980c91d"
+    },
+    {
+      "path": "data/nab/data/realTraffic/occupancy_t4013.csv",
+      "bytes": 62609,
+      "sha256": "5663a8122a300360eb51fbbd0f21706da05af1af55262926d6a226bb6d071704"
+    },
+    {
+      "path": "data/nab/data/realTraffic/speed_6005.csv",
+      "bytes": 57538,
+      "sha256": "7976e7596cd1e579696c737576e96a26fe041484472ed7d0a463ce2b094d7aa7"
+    },
+    {
+      "path": "data/nab/data/realTraffic/speed_7578.csv",
+      "bytes": 25928,
+      "sha256": "15ba994384730cb5a2e6818f17ded1430b40d92eb7a08e5b1a48a445c8c350f6"
+    },
+    {
+      "path": "data/nab/data/realTraffic/speed_t4013.csv",
+      "bytes": 57400,
+      "sha256": "fa5532d6f7db36cadc73e657fd4dfef05cb1ec44d4010243b314d3f1bbd6a7b5"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_AAPL.csv",
+      "bytes": 368111,
+      "sha256": "826f5cf404c2890784a7824f7102fd00cb134a4948e12e44ec320d095cbbc217"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_AMZN.csv",
+      "bytes": 364666,
+      "sha256": "234f5e63f19a62720dfb7ccfd6ecc8349b94d93b33ef8aafbdb17edda0b654f3"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_CRM.csv",
+      "bytes": 350820,
+      "sha256": "e7133bf26479623d58fc7367107aea1cd7df6020420dece48b0eee4d26cdb28a"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_CVS.csv",
+      "bytes": 348802,
+      "sha256": "f0bdc89cba3dd2265b47069187c750eeae18ef48f76f86067ee26ea1af9c3114"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_FB.csv",
+      "bytes": 359760,
+      "sha256": "a7096bd646759486bda6796b5600cd33a4590f0842bf274ea7acba001b3ba591"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_GOOG.csv",
+      "bytes": 361270,
+      "sha256": "3a39cc23d1ff6a0f234b55298d0c46c21d2e94ddb81a0dad9e1e46e3aaa9ec90"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_IBM.csv",
+      "bytes": 351268,
+      "sha256": "4309bd56d28ddcbdc168e207da9717395fa2e9f74dba41fa768e0f7da8a116fa"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_KO.csv",
+      "bytes": 355283,
+      "sha256": "f3aa8157043c6569911031535bd1f7a73b428b5a2d95238d79b9d5b88ceebbd2"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_PFE.csv",
+      "bytes": 348926,
+      "sha256": "18d2804d6a5dae63fe711baaba9242dce38a32bfade3dcdee1d8a7c1a866e41b"
+    },
+    {
+      "path": "data/nab/data/realTweets/Twitter_volume_UPS.csv",
+      "bytes": 350182,
+      "sha256": "be50f06bbb9d020f37653c8c5cf19af63f77aa0019d8cf10849d91f4af455af4"
+    },
+    {
+      "path": "data/nab/labels/combined_labels.json",
+      "bytes": 7015,
+      "sha256": "98724014c162fcfd4be605683517f194051a54e98756c53667bd33ddbc644d9b"
+    },
+    {
+      "path": "data/nab/labels/combined_windows.json",
+      "bytes": 15359,
+      "sha256": "1e1fbc4601321aad8d0f8b3784c8134299379f68f6c1f7777565f8ffd57ab6b1"
+    },
+    {
+      "path": "data/nab/labels/combined_windows_tiny.json",
+      "bytes": 828,
+      "sha256": "bc7fecdd0d46f56ca046c66dae37145dde1c5603ed0ccc6a2a996a4d3793725d"
+    },
+    {
+      "path": "data/nab/labels/raw/AL_labels_v0.8.json",
+      "bytes": 2388,
+      "sha256": "9b071c99567c25fa9bbe05f3d9fab2d9dfd2b4c3fba2b6f0fecb05690c3f1777"
+    },
+    {
+      "path": "data/nab/labels/raw/AL_labels_v1.0.json",
+      "bytes": 3584,
+      "sha256": "ae87154c7779ead49bd5fc2f5ab1d4541ce6a209a5c31b5d8af77992d8876a4b"
+    },
+    {
+      "path": "data/nab/labels/raw/CB_labels_v0.8.json",
+      "bytes": 2192,
+      "sha256": "e945ab0635dd78092004d368143e08c08132e703525175faf794b35455d0dc7c"
+    },
+    {
+      "path": "data/nab/labels/raw/CB_labels_v1.0.json",
+      "bytes": 3581,
+      "sha256": "156b9f6af0ebb931b5369a04faac9cb949f593cddce55cbf4138c18f11543b56"
+    },
+    {
+      "path": "data/nab/labels/raw/SA_labels_v0.8.json",
+      "bytes": 2271,
+      "sha256": "a7b23c2c237f3b6429881581da476655013eff03ba5c3703c91d8374a0bdefb6"
+    },
+    {
+      "path": "data/nab/labels/raw/SA_labels_v1.0.json",
+      "bytes": 3544,
+      "sha256": "4ab817bc7832bc6924eaff9e3138255e5fa0837c45d5e84d8116cf6fecaff2b7"
+    },
+    {
+      "path": "data/nab/labels/raw/known_labels_v1.0.json",
+      "bytes": 2196,
+      "sha256": "26bff6a2032f4c53e3f819ad5fe3279100ad40824b6507b7be8e7abc98c128cc"
+    },
+    {
+      "path": "data/nab/manifest.json",
+      "bytes": 23447,
+      "sha256": "9b89fcbdcb6860170d7a7864eb80699b0d6eff8177b3e467fd7f7dbb57f39759"
+    },
+    {
+      "path": "references/README.md",
+      "bytes": 3397,
+      "sha256": "dd6a10927ae0115c5478f073cc0023e7b3265243da148e9c0d479e10b221e8a1"
+    },
+    {
+      "path": "references/paper.pdf",
+      "bytes": 7252177,
+      "sha256": "8a498c335ec22d299ea04d9d3950a057774ce10c712f5ec9dd6349560e64ec45"
+    },
+    {
+      "path": "references/paper_code/LICENSE",
+      "bytes": 1106,
+      "sha256": "7940732ef5782bbab5e2f94dfdfd6da63a57281e4db902ae7e3f0fbfff0087db"
+    },
+    {
+      "path": "references/paper_code/README.md",
+      "bytes": 6635,
+      "sha256": "cf94487621b7ab9a7b7756357aac2b20aa9a26999705da14b84f209488ea3674"
+    },
+    {
+      "path": "references/paper_code/evaluate_baselines.py",
+      "bytes": 4213,
+      "sha256": "aeb9427de093b0675a7154dc165ef854bc32af8685bb84a5adaed45daece816d"
+    },
+    {
+      "path": "references/paper_code/evaluate_baselines_ensemble.py",
+      "bytes": 5146,
+      "sha256": "c6c79fb10e0301a8770f103074273bba5c06c0f09728191023f356ee71a3aa7b"
+    },
+    {
+      "path": "references/paper_code/long_horizon_predictions_to_scores.py",
+      "bytes": 3065,
+      "sha256": "42086b64615dab22da60b1e9a870d2e8c8774c36a06fbbc5a6191f5f76f137a8"
+    },
+    {
+      "path": "references/problem_statements.pdf",
+      "bytes": 176431,
+      "sha256": "b93d18863425418a296cdbfe14335de73a69761f69d537d88fddb72b917f3ef0"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 162,
+      "sha256": "594ddd0c5aa53e982e1676f41979bdf8f7d44d9af85e367cc5802ce28b05af0a"
+    },
+    {
+      "path": "run.py",
+      "bytes": 147,
+      "sha256": "9285d759004c9b25ed36328c6b251bc0b633597aa9e6126690c61fe0eeb3663c"
+    },
+    {
+      "path": "sentinel/__init__.py",
+      "bytes": 65,
+      "sha256": "d1683f1137bb2a9e1a1d2ce5572170d707359fda93684520447013025cefa246"
+    },
+    {
+      "path": "sentinel/data.py",
+      "bytes": 5355,
+      "sha256": "bde38dcf24f16d5e7a8ef9ca89d8b340755eb0b527d19200bc1a5644ae5153a0"
+    },
+    {
+      "path": "sentinel/detection.py",
+      "bytes": 3400,
+      "sha256": "22b28ca3a76b1be70f39d9342a96b73963c9a60c6552202d67a0fb87ad3540d8"
+    },
+    {
+      "path": "sentinel/evaluation.py",
+      "bytes": 2547,
+      "sha256": "29b520a10eebfb2cc33de7809b0fe3f6be1d6c2f841cf8991f2606b99716d76d"
+    },
+    {
+      "path": "sentinel/models.py",
+      "bytes": 3518,
+      "sha256": "1e32f8f55f80790e51071d43812fe9922e818ff69135154445e90aa0e17c1a6b"
+    },
+    {
+      "path": "sentinel/pipeline.py",
+      "bytes": 18095,
+      "sha256": "62c643e9ecc15d52f7939dd61d7caade749d634bb176e878806ac3953898d9e8"
+    },
+    {
+      "path": "sentinel/reporting.py",
+      "bytes": 6418,
+      "sha256": "4136e78c7b8c62bcd375d07a5c8af4ad3ed6d3def5ce163be11b439aa03c054b"
+    },
+    {
+      "path": "tests/test_invariants.py",
+      "bytes": 5115,
+      "sha256": "28d32b0db43c87a095600bb623970f651d0868db622f4c43a82b17426229f784"
+    }
+  ]
+}

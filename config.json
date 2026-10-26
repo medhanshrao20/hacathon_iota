@@ -1,0 +1,20 @@
+{
+  "data_dir": "data/nab/data",
+  "labels_file": "data/nab/labels/combined_windows.json",
+  "output_dir": "results",
+  "include": ["**/*.csv"],
+  "split_fractions": [0.5, 0.2, 0.15, 0.15],
+  "split_manifest": null,
+  "windows": [24, 48, 96],
+  "alphas": [0.1, 1.0, 10.0, 100.0],
+  "horizon_sets": [[1], [1, 8, 24], [1, 16, 64]],
+  "threshold_quantiles": [0.95, 0.975, 0.99, 0.995, 0.999],
+  "adaptation": [false, true],
+  "reference_size": 200,
+  "reference_update_every": 16,
+  "persistence": [[1, 1], [2, 3]],
+  "min_calibration_rows": 64,
+  "max_missing_fraction": 0.05,
+  "seed": 42,
+  "plot_max_points": 6000
+}

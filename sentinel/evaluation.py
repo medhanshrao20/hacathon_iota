@@ -15,6 +15,7 @@ def evaluate(timestamps, event_ids, flags, eligible):
     truth = event_ids >= 0
     events = set(event_ids[eligible & truth].tolist())
     detected, false_alerts, delays = set(), 0, []
+    normal_alerts, duplicate_alerts = 0, 0
     for t in np.flatnonzero(onset):
         event = int(event_ids[t])
         if event in events and event not in detected:
@@ -23,6 +24,10 @@ def evaluate(timestamps, event_ids, flags, eligible):
             delays.append(float((timestamps.iloc[t] - timestamps.iloc[first]).total_seconds()))
         else:
             false_alerts += 1
+            if event in detected:
+                duplicate_alerts += 1
+            else:
+                normal_alerts += 1
     tp, fn = len(detected), len(events - detected)
     precision = tp / (tp + false_alerts) if tp + false_alerts else 0.0
     recall = tp / len(events) if events else 0.0
@@ -36,12 +41,7 @@ def evaluate(timestamps, event_ids, flags, eligible):
             "mean_delay_seconds": float(np.mean(delays)) if delays else None,
             "point_f1": 2 * point_tp / max(1, 2 * point_tp + point_fp + point_fn),
             "false_positive_points": point_fp, "eligible_points": int(eligible.sum()),
+            "normal_alert_episodes": normal_alerts, "duplicate_alert_episodes": duplicate_alerts,
+            "normal_points": int((eligible & ~truth).sum()),
+            "false_alerts_per_1000_normal_points": 1000 * false_alerts / max(1, int((eligible & ~truth).sum())),
             "false_positive_rate": point_fp / max(1, int((eligible & ~truth).sum()))}
-
-
-def selection_key(metrics, forecast_mae, complexity):
-    """No-event validation cannot establish anomaly recall; prefer fewer alarms."""
-    delay = metrics["mean_delay_seconds"]
-    return (metrics["event_f1"], -metrics["false_alerts"],
-            metrics["event_recall"], -(delay if delay is not None else float("inf")),
-            -metrics["false_positive_rate"], -forecast_mae, -complexity)

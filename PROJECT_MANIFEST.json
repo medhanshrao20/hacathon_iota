@@ -11,9 +11,14 @@
       "sha256": "8dd1c0b3e46471ab63a000633ab3764a4fe1b87c9efa6d2be43145967eb86e26"
     },
     {
+      "path": "BASELINE.md",
+      "bytes": 1081,
+      "sha256": "81db41662996409d6d8dccecbd58024f7ef78f0217f595ff99373dc55d97b34c"
+    },
+    {
       "path": "config.json",
-      "bytes": 617,
-      "sha256": "3559279122542635e16b5407e1d3211c5dd0a801d03c08944ce298a71c8e9200"
+      "bytes": 1130,
+      "sha256": "7d0c8507c1503916b1016312fe2a00713056a28f069e24047b9093b1622e2a42"
     },
     {
       "path": "data/nab/data/artificialNoAnomaly/art_daily_no_noise.csv",
@@ -377,18 +382,18 @@
     },
     {
       "path": "METHODOLOGY.md",
-      "bytes": 10298,
-      "sha256": "8e5f2730e9a1e73192ae0192f7426cbea557643b586893e43c1dbbea0c1cee5f"
+      "bytes": 10206,
+      "sha256": "98dd0b5a7073beec752875c14133c01bab55cfc8438c0b187475bf75af2857ca"
     },
     {
       "path": "PREPARATION_STATUS.md",
-      "bytes": 1968,
-      "sha256": "fe41234e4fd080b79adead3ab64b5b4acfe637a524e0f3216a5295e6eb291541"
+      "bytes": 2607,
+      "sha256": "cd8424d48aeedd5ee77f200c08d1a06d39d7a9f331c4d183348b66cc92c8368e"
     },
     {
       "path": "README.md",
-      "bytes": 9322,
-      "sha256": "6ae30c89e4a9aa7dcc75f24282569b8776f5649f1f34f58b8f029a005087c4f7"
+      "bytes": 10042,
+      "sha256": "f4be27d6023d62e9c786b1d301365bf34017c5d5e45f77265bb69a0eebf4e23b"
     },
     {
       "path": "references/paper.pdf",
@@ -452,28 +457,33 @@
     },
     {
       "path": "sentinel/detection.py",
-      "bytes": 3400,
-      "sha256": "22b28ca3a76b1be70f39d9342a96b73963c9a60c6552202d67a0fb87ad3540d8"
+      "bytes": 5700,
+      "sha256": "0065ad27bc6e978497514a51297c5ba0976ae28c7e6c9bbaa42ed4bc54cc3e28"
     },
     {
       "path": "sentinel/evaluation.py",
-      "bytes": 2547,
-      "sha256": "29b520a10eebfb2cc33de7809b0fe3f6be1d6c2f841cf8991f2606b99716d76d"
+      "bytes": 2587,
+      "sha256": "13d96b3cbee52e7f84bb335405a099f803656d6e5485c92d475c93d96964c83d"
     },
     {
       "path": "sentinel/models.py",
-      "bytes": 3643,
-      "sha256": "65f0eb0e938e76e9eaa42ca5b8889cbf1ecc222d351bacb2f7a1061475c2ccc1"
+      "bytes": 7021,
+      "sha256": "cef6cc4b367800b96c2d6404bcb896e9f338d6914c588d897cbac9eea281cec6"
     },
     {
       "path": "sentinel/pipeline.py",
-      "bytes": 18095,
-      "sha256": "62c643e9ecc15d52f7939dd61d7caade749d634bb176e878806ac3953898d9e8"
+      "bytes": 16451,
+      "sha256": "8b4a92e301ffb03d8a63ee673ad197c88cbe802eb773164cbdc3c588b52528b2"
     },
     {
       "path": "sentinel/reporting.py",
-      "bytes": 6418,
-      "sha256": "4136e78c7b8c62bcd375d07a5c8af4ad3ed6d3def5ce163be11b439aa03c054b"
+      "bytes": 6931,
+      "sha256": "a2d044967ab43fb9cc0a8d673941926a3922c9f147b58dcfbe72a680b6a15dbe"
+    },
+    {
+      "path": "sentinel/validation.py",
+      "bytes": 12816,
+      "sha256": "66d31009a748d4e3913f128288f087176e737ee2efba6085e5d91b5d857172d1"
     },
     {
       "path": "tests/test_invariants.py",
@@ -481,9 +491,19 @@
       "sha256": "9b9ae73d18f4d8b2dface8f4d25b2de7b22d3f3d77bfc48323e9b3f4b0b5ade4"
     },
     {
+      "path": "tests/test_leakage_controls.py",
+      "bytes": 8322,
+      "sha256": "408140ae6b3cf77024f1bf99da825d14b5b954de8d74844781bfd54ea80ad668"
+    },
+    {
       "path": "tests/test_pipeline.py",
-      "bytes": 2324,
-      "sha256": "d43131cb4416f4f0aee4cde5703d8d525af937c445244c86d08e0b496e958d0b"
+      "bytes": 5672,
+      "sha256": "df74e85df9f6131ba947da6b02636d06b28ad7695376d6400a973a258ba91aa2"
+    },
+    {
+      "path": "UPGRADE_CHECKS.json",
+      "bytes": 17201,
+      "sha256": "0828287da9dc67861723d58cebc7ad3e3d3e103f7538cf6c5761d3f61be47e63"
     }
   ]
 }

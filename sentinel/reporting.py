@@ -23,6 +23,8 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
                           "value": np.where(observed[start:start+n], values[start:start+n], np.nan),
                           "observed": observed[start:start+n], "anomaly_score": replay["score"],
                           "threshold": threshold,
+                          "raw_threshold_exceeded": replay.get("raw_flag", replay["flag"]),
+                          "incident_profile": replay.get("incident_profile", "plain"),
                           "label": np.where(scored, np.where(replay["flag"], "ANOMALOUS", "NORMAL"),
                                             "UNSCORABLE")})
     for column, horizon in enumerate(model.horizons):
@@ -33,6 +35,7 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
         frame[f"error_h{horizon}"] = frame["value"] - frame[f"forecast_h{horizon}"]
         frame[f"squared_error_h{horizon}"] = frame[f"error_h{horizon}"] ** 2
         frame[f"score_h{horizon}"] = replay["z"][:, column]
+    frame["threshold_exceeded_without_incident"] = frame["raw_threshold_exceeded"] & ~replay["flag"]
     evidence = []
     for i in range(n):
         if not scored[i]:
@@ -45,7 +48,7 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
             f"{replay['center'][i, dominant]:.6g}; range "
             f"[{replay['lower'][i, dominant]:.6g}, {replay['upper'][i, dominant]:.6g}]; "
             f"score {replay['score'][i]:.4g} versus threshold {threshold:.4g}. "
-            "Label includes configured persistence; this is statistical evidence, not a root cause."
+            "Label includes persistence, incident recovery and cooldown rules; this is evidence, not a root cause."
         )
     frame["evidence"] = evidence
     return frame
@@ -99,7 +102,9 @@ def summary_report(directory, records):
 <style>body{{font:16px system-ui;max-width:1200px;margin:40px auto;padding:20px;color:#17324d}}
 table{{border-collapse:collapse}}td,th{{padding:8px;border:1px solid #ddd}}a{{color:#00796b}}</style>
 <h1>Sentinel experiment report</h1>
-<p>Each series winner was selected on validation only. Test results did not choose the winner.
+<p>Each series winner was selected on chronological development folds or other-source-group development data.
+All selections were frozen before test replay. The public test was inspected during v1 development;
+v2 results are exploratory, not a fresh independent benchmark. Test results did not choose the winner.
 These are local event metrics, not organizer-certified scores. Predictions are streaming-causal;
 forecast computation is batched, so reported throughput is not a per-window latency benchmark.</p>
 <h2>Test comparison</h2>{aggregate.to_html(index=False)}

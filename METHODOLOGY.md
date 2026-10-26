@@ -1,195 +1,180 @@
-# Methodology and experiment protocol
+# Sentinel v2 methodology
 
-## Goal
+## Objective and provenance
 
-For each observed time step, output a numerical anomaly score, NORMAL/ANOMALOUS
-label and numerical explanation. Missing or insufficient-history rows are
-UNSCORABLE rather than fabricated normal predictions. Optimize the organizer's
-event metric once supplied; use the explicit local event metric in the meantime.
+Predict expected readings and flag unusual deviations with numerical evidence.
+The Last-3 baseline and short/long-horizon motivation are credited to Zhu,
+Carpentier and Verbeke (ICLR 2026). Ridge, robust statistics and seasonal naive
+are established methods. This is an engineering adaptation, not a claim of a
+new algorithm. Source links and selected licensed upstream files are in
+`references/`. No foundation-model weights or decomposition are required.
 
 ## 1. Data preparation
 
-- Input: a separate `timestamp,value` CSV for each univariate stream.
-- Parse timestamps as UTC and reject invalid dates. Public NAB has duplicate and
-  out-of-order timestamps: stable-sort stored history and keep the first row per
-  timestamp before splitting/replay. Preserve raw CSVs and audit removed/reordered
-  rows. Split boundaries refer to normalized rows. This is offline history
-  normalization, not online late-arrival handling.
-- Convert invalid/nonfinite values to missing and report their count.
-- Forward-fill values for model context only. Never backfill or interpolate
-  using future observations. Missing actual targets are not scored or trained on.
-- Reject streams above the configured missing fraction. Leading missing context
-  remains unavailable until a complete lag window exists.
-- Keep the original sampling order. Report irregular intervals. A forecast
-  horizon means an observation count, not an assumed wall-clock duration.
-- Keep data provenance, raw hashes and exclusive row split boundaries.
+Parse timestamps, stable-sort and retain first occurrence per timestamp before
+splitting. Preserve raw downloaded bytes. Reject invalid timestamps and streams
+above the missing-value limit. Forward-fill context only; never backfill. Missing
+actual targets are excluded from training/scoring. Leading missing context stays
+unavailable. Irregular intervals are reported, not silently resampled. Horizons
+are observation counts, not guaranteed elapsed durations. Normalized row counts
+define every explicit split boundary.
 
-## 2. Chronological roles
+## 2. Development isolation
 
-Default sections are training 50%, calibration 20%, validation 15%, test 15%.
-These are development defaults, not rules from the hackathon or paper. An
-organizer boundary manifest overrides the defaults. Predictions for later
-sections can use earlier observed context; parameters never use future labels.
+With final boundaries (train_end, calibration_end, test_start), define validation
+width d = test_start - calibration_end. For shifts 2, 1, 0 create folds:
 
-Ridge and its StandardScaler fit only training examples. For origin t and
-forecast horizon h, require t+h < train_end. Fit multi-output models only on
-origins for which all targets are observed and remain inside training. Training
-data can contain anomalies: no hidden-test or validation labels are used to
-remove them. Calibration contains out-of-training forecasts, not fitted errors.
+  (train_end - shift*d, calibration_end - shift*d, test_start - shift*d)
 
-## 3. Four method families
+Each fold is strictly ordered and ends before test_start. No shuffle, random
+split or bidirectional feature construction occurs. The object passed into
+development search contains only values, observation masks and label IDs before
+test_start. Scalers, seasonality estimates, noise floors and model targets are
+constructed from the appropriate fold's training prefix only.
 
-### Recent mean / Last-3
+Default folds are 0–20/20–40/40–55%, 0–35/35–55/55–70%, and
+0–50/50–70/70–85% for train/calibrate/validate. Previous validation observations
+can enter a later fold's training set because they are then historical. They
+cannot change earlier predictions. Final models use only the last fold's
+training prefix. No refit on all development data is silently performed.
 
-Forecast y[T] from mean(y[T-3:T]). Its raw squared error is the paper's causal
-Last-3 baseline away from warm-up boundaries. The project adds calibration,
-thresholding, persistence and optional error-reference adaptation. This is not
-an exact reproduction of the paper's complete metric pipeline.
+## 3. Optional supervised training cleanup
 
-### Rolling median/MAD
+When use_training_labels=true, form the normal mask ONLY from that fold's
+training label IDs. Exclude Ridge windows if any point in their complete
+input-to-last-target interval is missing or known anomalous. Prefix sums make
+this check exact and efficient. Exclude those training anomalies from period
+discovery and noise estimation too. Filtering cannot access calibration,
+validation or test labels. Record accepted and rejected training-window counts.
 
-Forecast y[T] from median(y[T-W:T]). Compute local variation as
-1.4826 * median(abs(history - median(history))). The current observation is
-excluded. Divide signed error by this past-only local scale, then calibrate
-its center/scale like the other methods. The raw scale has a training-derived
-floor to make constant histories well-defined. This detector is not copied
-from the paper; it is a robust statistical comparator.
+The public default enables this supervised historical cleanup. Set it false
+when organizer training annotations are unavailable/disallowed. The disabled
+mode does not consult training labels for fitting or feature discovery.
+Calibration and live reference updates never consult anomaly labels.
 
-### Single-horizon Ridge
+## 4. Predictors
 
-Input X[t] = [y[t-W+1], ..., y[t]]. Target is y[t+1]. Fit StandardScaler and
-L2-regularized Ridge regression, with intercept, using scikit-learn's Cholesky
-solver. No neural network, API, GPU or pretrained weights are needed.
+Recent mean: forecast y[T] = mean(y[T-3:T]); report squared error as well as the
+calibrated score. Rolling median uses the median of a trailing W window, and
+normalizes its signed error by 1.4826*MAD of that past-only raw window.
 
-### Multi-horizon Ridge
+Seasonal naive: detect a credible repeating lag p on training pairs only. Scan
+lags up to min(512, training_length/3), requiring enough allowed pairs, correlation
+at least .6, a local peak, and at least .1 improvement over the half-period lag.
+Choose the shortest qualifying cycle to avoid an arbitrary multiple. If none
+qualifies, p=1 and the seasonal method is explicitly persistence. It predicts
+y[T-p], with no fit on later values.
 
-Use the same inputs with direct targets at horizons [1,8,24] or [1,16,64].
-The regressions are direct: no recursive use of guessed intermediate values.
-At time T, compare y[T] with forecasts made at T-h for each horizon h.
-Batch matrix computation is mathematically equivalent to this forecast
-alignment; future observations are not part of a row's input.
+Ridge: fit StandardScaler and L2 regression with intercept on lagged readings.
+If training-only period discovery succeeds, append two seasonal historical lag
+features to the lookback. Direct target sets are [1], [1,8,24], [1,16,64]. For
+origin t, all inputs end at t and every target t+h must be inside training.
+At current time T score predictions made at T-h. Batch implementation preserves
+this alignment and is checked by causal perturbation tests. Regression alpha
+is 1/10/100; windows are 24/96. Ridge is a candidate, not presumed best.
 
-This implements a causal, endpoint-error adaptation of the short/long-horizon
-combination in Zhu et al., section 6.1. Their experiments use foundation
-models and future-block MSE assigned back to a block's start. Here we use
-Ridge, mature forecasts, robust calibration and the current timestamp.
-Therefore a result is not claimed as a reproduction of their reported score.
+## 5. Error calibration and expected ranges
 
-## 4. Calibration
+Use out-of-training errors in the calibration prefix. Each horizon has separate
+location/scale. Let b[h] be median signed error and D[h]=abs(error-b[h]). Compare:
 
-For each horizon, collect signed errors from the calibration section. Only
-observed targets with all forecast columns available are eligible.
+  MAD scale = max(1.4826*median(D), .1*quantile(D,.9), floor)
+  Empirical scale = max(quantile(D,q), floor)
 
-  bias[h] = median(error[h])
-  scale[h] = max(1.4826 * MAD(error[h]), floor)
-  z[T,h] = abs(error[T,h] - bias[h]) / scale[h]
+q is .99 or .999. The training-derived raw floor combines .001 times robust
+training spread, .1 times median normal adjacent change, a small relative level
+tolerance and 1e-9. This is a numerical/noise heuristic, not known sensor accuracy.
+The median detector divides by its past-only raw MAD first and uses a dimensionless
+floor of .001 for calibration. No future-derived variance floor is used.
+
+  z[T,h] = abs(error[T,h]-b[h])/scale[h]
   score[T] = max_h z[T,h]
+  threshold = max(quantile(calibration combined scores,q), 1)
 
-For the rolling median method, error above means signed error already divided
-by the past-only raw MAD. Each method therefore has its own calibrated score;
-score magnitudes are not probabilities and cannot be compared as confidence.
+The threshold lower bound prevents an all-constant calibration reference from
+creating an arbitrarily narrow range. Expected center is forecast+b*unit;
+half-width is threshold*scale*unit. unit=1 except for the median detector's
+raw local MAD. Ranges are empirical; neither Gaussian probability nor formal
+coverage is claimed. Calibration anomalies can still contaminate estimates.
 
-The initial threshold is a quantile of the combined calibration scores, not
-an assumed universal z=3. Candidate quantiles are .95/.975/.99/.995/.999.
-Calibration labels are not used. Calibration anomalies can contaminate
-thresholds; robust location/scale only mitigates this, not guarantees immunity.
+## 6. Incident decisions and past-only adaptation
 
-At each horizon display:
+Compare plain voting with a guarded incident state. Opening is either 1-of-1
+or 2-of-3 raw exceedances. An open guarded incident remains open through short
+dips. Close only after three observations below .6*threshold, then suppress
+reopening for eight observed readings. No true-event IDs enter this state.
+These fixed rules may merge or miss nearby real events; evaluate that tradeoff.
+Missing targets are unscoreable and clear voting history, not fabricated normal
+readings. Scoring flags across missing rows remain separate metric episodes.
 
-  expected = forecast + bias * local_unit
-  lower = expected - threshold * scale * local_unit
-  upper = expected + threshold * scale * local_unit
+Compare fixed references with adaptation. Adaptive references initialize from
+the last 200 valid calibration error vectors. Score and decide BEFORE updating.
+Append only errors with no raw exceedance and no active incident. Recompute
+every 16 accepted readings. Scale cannot drop below .5 of initial scale or
+the training floor. Neither coefficients nor thresholds are tuned using live
+truth. False normal acceptance can contaminate references; legitimate permanent
+changes can freeze adaptation. No unvalidated reset is hidden in the code.
 
-local_unit is one for forecasting methods and the raw local MAD for the median
-method. These are empirical detection ranges, not physical min/max or formal
-coverage guarantees.
+## 7. Stable selection and sparse-event fallback
 
-## 5. Sequential decisions and adaptation
+Only candidates completing every fold are eligible. Pool fold TP/FP/FN and
+normal-point counts; measure dispersion of F1 across folds containing events.
+The explicit ranking objective is:
 
-For each eligible reading: compute scores using the existing reference, append
-the raw threshold-exceedance vote, then issue the persistence decision.
-Try 1-of-1 and 2-of-3 votes. Persistence can delay/miss isolated anomalies;
-its false-alarm benefit must be validated. It can remain active briefly after
-the current score falls, which is disclosed in output evidence.
+  pooled event F1 - .1*event-fold F1 standard deviation
+    - .05*max(0, false_alerts_per_1000_normal_points - budget)
 
-Compare fixed references with adaptive references. Adaptive references begin
-with the last 200 valid calibration errors. After scoring, append the current
-errors only when neither the raw exceedance nor the persistence label is
-anomalous. Recalculate robust reference statistics every 16 accepted readings.
-The buffer contains at most 200 accepted vectors. Threshold quantile multiplier
-and Ridge coefficients are not retrained during evaluation.
+budget defaults to 1.0. Tie-break with fewer false alerts, higher recall, lower
+model complexity and stronger Ridge regularization. This objective and budget
+are declared heuristics, not a guarantee of the lowest test false-alert rate.
 
-This gate prevents immediate contamination but can freeze adaptation during a
-legitimate permanent change. No unvalidated auto-reset or test-label correction
-is hidden in the implementation. Missing readings clear persistence votes and
-do not update reference statistics.
+Tune per stream only with at least five DISTINCT labeled development events
+and events represented in at least two folds. Otherwise pool validation summaries
+from OTHER source groups and only peers whose last development timestamp is
+no later than the target's last pre-test timestamp. Both artificial categories
+share a source group. Users must group other related streams appropriately.
+No target/source-related stream or future peer-label period enters the pool.
+The pool uses only candidates complete on all peer folds. It never reads old
+test metrics, prior result folders or test-selected parameters.
 
-## 6. Search and selection
+If no eligible pool has sufficient event evidence, use the deterministic preset:
+fixed reference, empirical threshold, highest configured quantile, guarded
+incidents, 1-of-1 vote, window nearest 48 and stronger regularization. With no
+evidence to choose a family, use recent mean. Do not manufacture a validation
+winner on an event-free period. Record selection_source and selection_metrics.
 
-- W in [24,48,96]. Ridge alpha in [.1,1,10,100].
-- Horizon sets [1], [1,8,24], [1,16,64].
-- Fixed/adaptive reference; five threshold quantiles; two persistence rules.
-- No selected parameters are described as best before validation is run.
-- Select the best configuration per family on validation only. Rank by local
-  event F1, then fewer false alert episodes, higher recall, lower delay, lower
-  false-positive point rate, lower one-step MAE and lower complexity.
-- Select the winning family with the same validation ranking. Test results
-  are computed only after selection and never select the saved winner.
-- If validation contains no true events, warn explicitly: ranking can assess
-  false alerts and forecasting fit, but cannot establish anomaly sensitivity.
-- Each stream has independent selection; this is appropriate for known streams
-  with historical labels, not a claim of zero-shot generalization to new sensors.
-- Preserve every trial and candidate failure. A missing family is a visible
-  failed series, not silently omitted from a fair four-method comparison.
+All streams finish development first. Save every selected configuration in
+selection_frozen_before_test.json before any stream's test replay begins.
+This prevents another stream's already-computed test result influencing fallback.
 
-## 7. Local evaluation
+## 8. Evaluation, state and reporting
 
-The implementation deliberately spells out a provisional metric instead of
-assuming "event F1" has one universal definition:
+The local event-matching rule remains the v1 rule: episode onset inside a labeled
+window earns one TP; duplicates count as false alerts; no point adjustment.
+Report normal versus duplicate alert episodes separately. Clip windows at section
+boundaries and disclose censored delay origins. This provisional metric is not
+the original NAB score or a certified organizer event-F1 implementation.
+Align both matching and prediction schema when organizer specifications arrive.
 
-- An alert is the onset of a contiguous positive episode.
-- Onset inside an eligible labeled event detects that event once.
-- Additional alert episodes inside that event count as false alerts.
-- Onsets outside windows are false alerts; undetected windows are false negatives.
-- A permanent positive prediction cannot receive credit for every event it spans.
-- Missing/unscoreable rows break episodes and are excluded from denominators.
-- Windows crossing a section boundary are clipped; reported delay starts at the
-  first eligible labeled reading inside the section. These are censored local
-  delays, not necessarily delay from the original physical anomaly onset.
-- No point adjustment or ground-truth expansion is applied.
+Reports distinguish current raw exceedance from incident state and suppressed
+reopening. Save numerical forecasts, ranges and evidence. Save only the winning
+v2 bundle, including coefficients, detector state and sufficient lag history for
+same-stream continuation. New-data inference requires later timestamps, no labels
+and no refit. Old v1 bundles are rejected. Throughput is batch processing speed,
+not a certified real-time per-window latency benchmark.
 
-Report event precision/recall/F1, event counts, false alert episodes, mean detected
-event delay, point F1, false-positive point rate and one-step forecast MAE.
-Aggregate micro event F1 uses summed TP/FP/FN; macro includes zero-event series
-and is labeled accordingly. Processing throughput includes batched forecast
-computation and is not certified online-window latency. Search timings are
-recorded separately.
+## 9. What the safeguards establish
 
-Replace this matching policy with official organizer rules before interpreting
-scores as competition results. The canonical prediction schema also needs an
-organizer-specific conversion once their required schema is available.
+Synthetic tests verify train-boundary target isolation, train-only scaling and
+period discovery, full-span anomaly filtering, unchanged CV/selection after
+test-value/label perturbations, target-group and future-peer exclusion, chunked
+incident replay equivalence, CLI selection freezing, and saved inference.
+Read-only data/fold checks cover all 58 series. They do not establish a test F1
+improvement without the user's next run.
 
-## 8. Reporting and deployment
-
-Write per-horizon raw forecast, corrected center, lower/upper range, signed and
-squared errors, normalized score, combined score, threshold, decision and a
-numerical explanation. Charts show the short-horizon range, all alerts and known
-test windows. Per-horizon ranges remain available in CSVs.
-
-Save the validation-selected model, detector state after test replay, and enough
-observed history to continue the same signal. New-data inference requires no
-labels, does not refit, and rejects timestamps overlapping saved history. Its
-updated state is saved separately to avoid overwriting the original artifact.
-
-## 9. Credit and limitations
-
-Credit Zhu, Carpentier and Verbeke (ICLR 2026) for the evaluated one-liner baseline
-and multiple-horizon motivation. Credit Numenta and original contributors for
-NAB. Use scikit-learn's Ridge implementation. The pipeline is an engineering
-implementation/adaptation, not a claimed new forecasting or detection algorithm.
-
-The paper does not prove Ridge is best on NAB. More history or more horizons may
-hurt. Normal repeated peaks can look unusual; slow or predictable faults can be
-missed. All horizons can eventually incorporate a persistent anomaly. Fixed
-chronological sections may have few events. No best-result or winning guarantee
-is possible before running and inspecting validation and held-out evaluation.
+No implementation can guarantee zero overfitting. The public test has already
+been inspected and influenced the design of v2, so rerun results are exploratory.
+The code prevents direct test use during fitting/calibration/selection; an
+independent generalization claim requires genuinely untouched data such as the
+organizer's hidden test. More tuning on the same public replay does not create
+fresh evidence. Existing v1 results stay available as the comparison baseline.

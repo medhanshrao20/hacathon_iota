@@ -1,5 +1,16 @@
 # Preparation status
 
+## v2 upgrade status
+
+The upgrade implements three chronological folds, source/time-isolated pooling,
+seasonal naive and seasonal Ridge inputs, empirical/MAD thresholds, incident
+hysteresis/recovery/cooldown, and optional training-label-only window cleanup.
+All 17 synthetic regression tests passed (21.929 seconds), including two-stream
+CLI selection freezing and unlabeled continuation. Read-only checks passed for
+all 58 series. No full v2 real-data experiment was started by the assistant.
+Existing results remain unchanged. See BASELINE.md and the revised README.
+No zero-overfitting or unseen-test performance guarantee is claimed.
+
 ## Latest verification after first-run failure
 
 The first user-started NAB run failed on all series because scikit-learn's

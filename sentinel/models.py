@@ -45,7 +45,8 @@ class Forecaster:
         if not valid.any():
             return result
         if self.kind == "ridge":
-            forecasts = self.estimator.predict(x[valid])
+            # Ridge may squeeze a single target to (n,); alignment needs (n, h).
+            forecasts = np.asarray(self.estimator.predict(x[valid])).reshape(-1, len(self.horizons))
         elif self.kind == "mean":
             forecasts = x[valid].mean(axis=1, keepdims=True)
         elif self.kind == "median":

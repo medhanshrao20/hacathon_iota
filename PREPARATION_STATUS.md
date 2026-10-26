@@ -1,5 +1,16 @@
 # Preparation status
 
+## Latest verification after first-run failure
+
+The first user-started NAB run failed on all series because scikit-learn's
+single-target Ridge predictions were one-dimensional. Forecast output now
+explicitly retains the horizon column. All 9 synthetic regression tests pass,
+including the four-method pipeline and saved-model loading (4.809 seconds).
+The full NAB experiment was not restarted. No completed real-data evaluation
+scores are available. Original preparation-only checks below are historical.
+
+## Original preparation checks
+
 - Application entry point: `run.py`.
 - Public NAB snapshot downloaded at pinned commit
   `ea702d75cc2258d9d7dd35ca8e5e2539d71f3140`.

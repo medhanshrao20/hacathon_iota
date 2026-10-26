@@ -17,6 +17,16 @@ from sentinel.models import Forecaster, baseline_scales
 
 
 class Invariants(unittest.TestCase):
+    def test_single_horizon_ridge_keeps_forecast_column(self):
+        values = np.sin(np.arange(160) / 8.)
+        observed = np.ones(len(values), dtype=bool)
+        model = Forecaster("ridge", 12, (1,), 10).fit(values, observed, 80)
+        prediction = model.predict_aligned(values)
+        self.assertEqual(prediction.shape, (160, 1))
+        self.assertTrue(np.isfinite(prediction[12:]).all())
+        expected = np.asarray(model.estimator.predict(values[88:100].reshape(1, -1))).item()
+        self.assertAlmostEqual(prediction[100, 0], expected)
+
     def test_timestamp_cleanup_preserves_first_duplicate(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "sample.csv"

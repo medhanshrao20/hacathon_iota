@@ -2,8 +2,9 @@
 
 A portable CPU project for the Utkrishta 24-hour hackathon. It compares four
 method families, chooses configurations on validation, and then evaluates an
-untouched chronological local test. This package has been prepared without
-running training or evaluation. No performance scores are claimed yet.
+untouched chronological local test. The nine synthetic regression tests pass,
+including a small end-to-end four-method run. No successful full NAB evaluation
+or performance scores are claimed yet.
 
 ## Run on another PC
 
@@ -194,5 +195,7 @@ processing throughput, not a measured online per-window latency guarantee.
 | `sentinel/pipeline.py` | Search, selection, test and saved-model inference |
 | `sentinel/reporting.py` | Prediction explanations, charts and reports |
 
-Training/evaluation and synthetic runtime tests were deliberately not executed
-during preparation. Syntax and downloaded data can be checked independently.
+Initial preparation used syntax/data checks only. A later first NAB attempt
+failed due to squeezed single-target Ridge predictions. That shape bug is fixed;
+all nine synthetic tests now pass. The full NAB experiment has not been restarted
+by the assistant and still needs a fresh manual run.

@@ -168,7 +168,7 @@ def predict_file(args, config):
     if not args.artifact:
         raise ValueError("--predict requires a trusted --artifact model.joblib")
     bundle = joblib.load(project_path(args.artifact))
-    if bundle.get("format_version") != 3:
+    if bundle.get("format_version") not in (3, 4):
         raise ValueError("Older model format: rerun training with the current implementation")
     stamps, values, observed, audit = load_series(project_path(args.predict), config["max_missing_fraction"])
     old_stamps = pd.to_datetime(bundle["history_timestamps"], utc=True)
@@ -180,7 +180,13 @@ def predict_file(args, config):
     model, detector = bundle["model"], bundle["detector"]
     predictions = model.predict_aligned(joined)
     _, local, auxiliary = prepare_errors(joined, predictions, joined_observed, model, bundle["raw_floor"])
-    replay = detector.replay(joined, predictions, joined_observed, offset, len(joined), local, auxiliary)
+    if bundle.get("format_version") == 4:
+        from .policies import replay_policy
+        secondary_model = bundle.get("secondary_model")
+        secondary = secondary_model.auxiliary_scores(joined) if secondary_model is not None else None
+        replay = replay_policy(detector, joined, predictions, joined_observed, offset, len(joined), local, secondary)
+    else:
+        replay = detector.replay(joined, predictions, joined_observed, offset, len(joined), local, auxiliary)
     all_stamps = pd.Series(old_stamps.tolist() + stamps.tolist())
     frame = prediction_frame(all_stamps, joined, joined_observed, predictions, replay, model, detector.threshold, offset)
     output = new_output(config, "predict")
@@ -201,7 +207,7 @@ def new_output(config, prefix):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Sentinel v3: nonlinear forecasts, pattern novelty, causal CV")
+    parser = argparse.ArgumentParser(description="Sentinel: controlled causal anomaly-detection experiments")
     parser.add_argument("--config", default="config.json")
     parser.add_argument("--check-data", action="store_true", help="Validate data and fold boundaries; no fitting")
     parser.add_argument("--download-data", action="store_true", help="Pinned data download only")
@@ -209,12 +215,16 @@ def main():
     parser.add_argument("--limit", type=int)
     parser.add_argument("--selection-audit", help="Audit saved development folds only; no training or test replay")
     parser.add_argument("--predict", help="Unlabeled continuation CSV")
-    parser.add_argument("--artifact", help="Trusted v3 model.joblib")
+    parser.add_argument("--artifact", help="Trusted v3/v4 model.joblib")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be positive")
     config = json.loads(project_path(args.config).read_text(encoding="utf-8"))
     validate_config(config)
+    controlled = config.get("workflow") == "controlled_v4"
+    if controlled:
+        from .controlled import validate_settings
+        validate_settings(config["v4"])
     # Bound BLAS/OpenMP parallelism; avoid oversubscribing small per-stream fits.
     thread_controller = threadpool_limits(limits=config.get("cpu_threads", 4))
     np.random.seed(config["seed"])
@@ -248,7 +258,7 @@ def main():
         write_json(directory / "selection_policy_development.json", audit)
         print(f"Development-only selection audit: {audit['chosen_policy']}; {directory}")
         return
-    output = new_output(config, "experiment_v3")
+    output = new_output(config, "experiment_v4" if controlled else "experiment_v3")
     write_json(output / "config_used.json", config)
     write_json(output / "environment.json", {"python": platform.python_version(),
                "packages": {name: importlib.metadata.version(name) for name in
@@ -256,6 +266,12 @@ def main():
     sources = list((ROOT / "sentinel").glob("*.py")) + [ROOT / "run.py"]
     write_json(output / "source_hashes.json", {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                                                for p in sources})
+    if controlled:
+        from .controlled import run_controlled
+        control_config = json.loads(project_path(config["control_config"]).read_text(encoding="utf-8"))
+        validate_config(control_config)
+        run_controlled(config, root, paths, labels, splits, output, control_config)
+        return
     streams, failures, records = [], [], []
     for number, path in enumerate(paths, 1):
         relative = path.relative_to(root).as_posix()

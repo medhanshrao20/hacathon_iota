@@ -1,0 +1,14 @@
+{
+  "workflow": "controlled_v4",
+  "full_v4_real_data_run_started": false,
+  "full_v4_real_data_performance_measured": false,
+  "synthetic_regression_tests_passed": 29,
+  "data_and_fold_checks_passed": 58,
+  "verified_original_data_files": 70,
+  "v2_control_config_matches_commit": "9a76ee2",
+  "v2_selector_ast_matches_original": true,
+  "historical_development_model_selections_matched": 58,
+  "minimum_observed_rows_in_new_calibration_half": 112,
+  "existing_results_preserved": true,
+  "warning": "Preparation and synthetic checks do not establish an F1 improvement or zero overfitting"
+}

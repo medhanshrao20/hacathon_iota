@@ -1,5 +1,25 @@
 # Preparation status
 
+## v4 preparation - full run left for the user
+
+Implemented the frozen v2 control, the A/B/C factorial comparison, two-sided
+CUSUM, separate confirmation policies and an explicit single-exceedance variant.
+Adoption uses earlier-to-later real development folds, historical source cutoffs,
+paired stream/source-group uncertainty, a recall floor and a soft alert budget.
+Uncertain changes retain v2. Synthetic injections run after selection freezes and
+never train or choose models. One-reading latency is measured separately.
+
+All 29 regression tests passed (59.128 seconds). The latest v4-specific checks
+also passed after adding saved-verifier inference and channel evidence. Read-only
+checks passed for all 58 series and 70 downloaded hashes. Every calibration half
+has at least 112 observed rows. The preserved v2 selector's AST and configuration
+match commit 9a76ee2; cached development choices matched on all 58 streams.
+
+No full real-data v4 fitting, policy evaluation, test replay or measured F1 was
+started during preparation. Existing results remain intact. Run run.py manually;
+new outputs go to results/experiment_v4_<timestamp>/. See V4_PREPARATION.json,
+README.md and V4_METHODOLOGY.md. Older status sections below are historical.
+
 ## v3 current upgrade
 
 Added bounded histogram gradient boosting, training-normal shape/state novelty

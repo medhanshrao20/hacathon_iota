@@ -1,4 +1,9 @@
-# Sentinel v3 methodology
+# Sentinel v2/v3 forecasting methodology
+
+The current default workflow is the controlled v4 experiment described in
+V4_METHODOLOGY.md. This file preserves the shared forecasting definitions and
+historical v3 selection design; v4 uses the frozen v2 selector instead of v3's
+local-evidence shrinkage. See README.md for current commands.
 
 ## Objective and provenance
 

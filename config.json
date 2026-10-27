@@ -2,26 +2,69 @@
   "data_dir": "data/nab/data",
   "labels_file": "data/nab/labels/combined_windows.json",
   "output_dir": "results",
-  "include": ["**/*.csv"],
-  "split_fractions": [0.5, 0.2, 0.15, 0.15],
+  "include": [
+    "**/*.csv"
+  ],
+  "split_fractions": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+  ],
   "split_manifest": null,
-  "run_version": 3,
-  "extra_models": ["boosted", "pattern"],
+  "run_version": 4,
+  "extra_models": [
+    "boosted",
+    "pattern"
+  ],
   "boosting_iterations": 100,
   "pattern_reference_size": 512,
   "selection_prior_events": 5.0,
   "local_false_alert_penalty": 0.05,
   "cpu_threads": 4,
-  "windows": [24, 96],
-  "alphas": [1.0, 10.0, 100.0],
-  "horizon_sets": [[1], [1, 8, 24], [1, 16, 64]],
-  "threshold_quantiles": [0.99, 0.999],
-  "threshold_methods": ["mad", "empirical"],
-  "incident_profiles": ["plain", "guarded"],
+  "windows": [
+    24,
+    96
+  ],
+  "alphas": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "horizon_sets": [
+    [
+      1
+    ],
+    [
+      1,
+      8,
+      24
+    ],
+    [
+      1,
+      16,
+      64
+    ]
+  ],
+  "threshold_quantiles": [
+    0.99,
+    0.999
+  ],
+  "threshold_methods": [
+    "mad",
+    "empirical"
+  ],
+  "incident_profiles": [
+    "plain",
+    "guarded"
+  ],
   "cv_folds": 3,
   "min_selection_events": 5,
   "min_event_folds": 2,
-  "source_groups": {"artificialNoAnomaly": "artificial", "artificialWithAnomaly": "artificial"},
+  "source_groups": {
+    "artificialNoAnomaly": "artificial",
+    "artificialWithAnomaly": "artificial"
+  },
   "false_alert_budget_per_1000": 1.0,
   "use_training_labels": true,
   "seasonal_features": true,
@@ -31,12 +74,54 @@
   "close_threshold_ratio": 0.6,
   "cooldown_readings": 8,
   "adaptive_min_scale_fraction": 0.5,
-  "adaptation": [false, true],
+  "adaptation": [
+    false,
+    true
+  ],
   "reference_size": 200,
   "reference_update_every": 16,
-  "persistence": [[1, 1], [2, 3]],
+  "persistence": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
   "min_calibration_rows": 64,
   "max_missing_fraction": 0.05,
   "seed": 42,
-  "plot_max_points": 6000
+  "plot_max_points": 6000,
+  "workflow": "controlled_v4",
+  "control_config": "controls/v2_config.json",
+  "v4": {
+    "alert_budget_per_10000": 10.0,
+    "rate_quantiles": [
+      0.99,
+      0.995,
+      0.999
+    ],
+    "cusum_drift": 0.5,
+    "cusum_reference_quantile": 0.99,
+    "confirmation_percentile": 0.99,
+    "bootstrap_repetitions": 500,
+    "confidence_level": 0.95,
+    "minimum_f1_gain": 0.02,
+    "minimum_policy_streams": 4,
+    "minimum_policy_events": 5,
+    "maximum_recall_drop": 0.0,
+    "runtime_windows": 128,
+    "injection_seeds": [
+      17,
+      83
+    ],
+    "injection_lengths": [
+      4,
+      16
+    ],
+    "injection_context": 32,
+    "secondary_window": 24
+  }
 }

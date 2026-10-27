@@ -36,6 +36,10 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
         frame[f"squared_error_h{horizon}"] = frame[f"error_h{horizon}"] ** 2
         frame[f"score_h{horizon}"] = replay["z"][:, column]
     frame["threshold_exceeded_without_incident"] = frame["raw_threshold_exceeded"] & ~replay["flag"]
+    for name in ("spike_triggered", "spike_threshold", "cusum_statistic", "cusum_threshold",
+                 "confirmation_percentile", "confirmation_threshold", "decision_trigger"):
+        if name in replay:
+            frame[name] = replay[name]
     for column, name in enumerate(model.auxiliary_names):
         frame[name] = replay["auxiliary_scores"][:, column]
         frame[f"score_{name}"] = replay["z"][:, len(model.horizons) + column]
@@ -63,6 +67,13 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
             "Label includes persistence, incident recovery and cooldown rules; this is evidence, not a root cause."
         )
     frame["evidence"] = evidence
+    if "decision_trigger" in frame:
+        frame["evidence"] += (" Channel/state: " + frame["decision_trigger"] +
+            "; spike cutoff " + frame["spike_threshold"].round(4).astype(str) +
+            "; CUSUM statistic/cutoff " + frame["cusum_statistic"].round(4).astype(str) + "/" +
+            frame["cusum_threshold"].round(4).astype(str) +
+            "; secondary percentile/cutoff " + frame["confirmation_percentile"].round(4).astype(str) + "/" +
+            frame["confirmation_threshold"].round(4).astype(str) + ". Disabled cutoffs are nan.")
     return frame
 
 
@@ -119,6 +130,10 @@ All selections were frozen before test replay. The public test was inspected dur
 These repeat-test results are exploratory, not a fresh independent benchmark. Test results did not choose the winner.
 These are local event metrics, not organizer-certified scores. Predictions are streaming-causal;
 forecast computation is batched, so reported throughput is not a per-window latency benchmark.</p>
+<p>In v4, runtime_per_window.csv separately measures feature construction, forecasts and state updates
+one reading at a time. development_policy_comparison.csv contains next-fold real-event results;
+synthetic_stress.csv contains separate post-selection simulations. Synthetic and test scores never select policies.
+Selection uncertainty and rejection reasons are saved in each series selected.json; uncertain gains retain v2.</p>
 <h2>Test comparison</h2>{aggregate.to_html(index=False)}
 <h2>Detailed results</h2>{frame.to_html(index=False)}
 <h2>Selected-method charts</h2><ul>{links}</ul>

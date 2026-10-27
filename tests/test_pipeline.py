@@ -15,7 +15,7 @@ from sentinel.pipeline import ROOT, search_series
 
 class SyntheticPipeline(unittest.TestCase):
     def test_cli_freezes_all_selections_before_test_and_predicts_new_data(self):
-        config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        config = json.loads((ROOT / "config_v3.json").read_text(encoding="utf-8"))
         config.update(windows=[8], alphas=[10.], horizon_sets=[[1], [1, 4]],
                       threshold_quantiles=[.99], adaptation=[False], persistence=[[1, 1]],
                       threshold_methods=["empirical"], incident_profiles=["guarded"],
@@ -63,7 +63,7 @@ class SyntheticPipeline(unittest.TestCase):
             self.assertEqual(len(pd.read_csv(predicted)), 10)
 
     def test_seven_methods_finish_and_saved_model_can_predict(self):
-        config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        config = json.loads((ROOT / "config_v3.json").read_text(encoding="utf-8"))
         config.update(windows=[8], alphas=[1.0], horizon_sets=[[1], [1, 4]],
                       threshold_quantiles=[.99], adaptation=[False, True],
                       persistence=[[1, 1]], min_calibration_rows=16,

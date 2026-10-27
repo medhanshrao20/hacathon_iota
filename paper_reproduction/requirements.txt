@@ -1,0 +1,3 @@
+# Base launcher requirements for paper_reproduction/run.py
+numpy>=1.26.0
+pandas>=2.0.0

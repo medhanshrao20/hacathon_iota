@@ -7,7 +7,11 @@ import sys
 import numpy as np
 import pandas as pd
 
-from run import METRICS, ROOT, required_rows, save
+try:
+    from paper_reproduction.run import METRICS, ROOT, required_rows, save
+except ImportError:
+    from run import METRICS, ROOT, required_rows, save
+
 
 
 def original_functions(filename, names):

@@ -183,7 +183,12 @@ def run(args):
         print('Environments installed. No model inference or NAB evaluation performed.')
         return
     if args.prepare or args.check_data:
-        records = prepare(args.nab_dir)
+        if args.nab_dir.exists():
+            records = prepare(args.nab_dir)
+        elif (ROOT / 'data/manifest.json').exists() and (ROOT / 'data/TSB-AD-U').exists():
+            records = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf8'))['files']
+        else:
+            raise FileNotFoundError(f'NAB directory not found at {args.nab_dir} and pre-converted data not found at {ROOT / "data/TSB-AD-U"}')
         print(f'Prepared {len(records)} series, {sum(r["rows"] for r in records):,} readings. No models run.')
         return
     if args.plan:
@@ -202,7 +207,12 @@ def run(args):
             raise ValueError('Experiment plan changed since the run was frozen')
         files = pd.read_csv(folder / 'data/File_List/TSB-AD-U-Eva.csv').file_name.tolist()
     else:
-        records = prepare(args.nab_dir)
+        if args.nab_dir.exists():
+            records = prepare(args.nab_dir)
+        elif (ROOT / 'data/manifest.json').exists() and (ROOT / 'data/TSB-AD-U').exists():
+            records = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf8'))['files']
+        else:
+            raise FileNotFoundError(f'NAB directory not found at {args.nab_dir} and pre-converted data not found at {ROOT / "data/TSB-AD-U"}')
         files = [r['file_name'] for r in records]
         if args.only:
             files = [f for f in files if args.only in f]
@@ -295,7 +305,8 @@ def main():
     action.add_argument('--prepare', action='store_true', help='Convert existing NAB files only')
     action.add_argument('--check-data', action='store_true', help='Verify/prepare data without inference')
     action.add_argument('--plan', action='store_true', help='Print frozen model configurations; no inference')
-    parser.add_argument('--nab-dir', type=Path, default=ROOT.parent / 'data/nab')
+    default_nab = (ROOT / 'data/nab') if (ROOT / 'data/nab').exists() else (ROOT.parent / 'data/nab')
+    parser.add_argument('--nab-dir', type=Path, default=default_nab)
     parser.add_argument('--only', help='Optional filename substring; otherwise all 58 streams')
     parser.add_argument('--resume', type=Path, help='Resume an existing paper run folder')
     args = parser.parse_args()

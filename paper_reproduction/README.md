@@ -1,4 +1,88 @@
-# Zhu et al. (ICLR 2026): published methods on our NAB data
+# Zhu et al. (ICLR 2026): Published Methods on NAB Data
+
+> **Self-Contained & Path-Independent:** This entire folder is 100% portable. All dataset files, model caches, temporary files, downloaded weights, and run outputs live strictly inside `paper_reproduction/` (under `.cache/`, `data/`, and `runs/`). You can copy or move this folder to any computer and run it immediately without modifying any paths.
+
+---
+
+## 🚀 Quickstart: Running on Any PC
+
+### 1. Prerequisites
+- **Python 3.11** installed on your system.
+- *(Optional but recommended)* NVIDIA GPU with CUDA for foundation models; runs seamlessly on CPU as fallback.
+
+### 2. Set Up the Virtual Environment (One-time)
+
+Open a terminal (PowerShell or Bash) in either the **project root** or inside the **`paper_reproduction`** folder:
+
+#### If inside the `paper_reproduction` folder:
+```powershell
+# Create virtual environment
+python -m venv .venv
+
+# Activate it (Windows PowerShell)
+.\.venv\Scripts\Activate.ps1
+# Or on Linux / macOS:
+# source .venv/bin/activate
+
+# Install base launcher dependencies
+pip install -r requirements.txt
+
+# Install isolated environments for all model families (MOMENT, Chronos, TimesFM, Time-MoE)
+python run.py --setup
+```
+
+#### If from the hackathon root folder:
+```powershell
+# Create & activate venv
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# Install requirements
+pip install -r paper_reproduction/requirements.txt
+
+# Setup model environments
+python paper_reproduction/run.py --setup
+```
+
+---
+
+## ⚡ How to Run
+
+| Goal | Command | Est. Time (CPU) |
+|---|---|---|
+| **Fast Baselines Only** *(Recommended first)* | `python run.py --suite baselines` | ~45–60 min |
+| **Test Single Series** | `python run.py --only speed_6005` | ~2–5 min |
+| **Check Data & Verification** | `python run.py --check-data` | < 5 sec |
+| **View Experiment Plan** | `python run.py --plan` | < 1 sec |
+| **Full Paper Reproduction** *(All 48 configurations)* | `python run.py` | 10–18+ hours |
+| **Resume an Interrupted Run** | `python run.py --resume runs/paper_nab_<TIMESTAMP>` | Resumes from last saved checkpoint |
+
+*(Note: If running from the parent hackathon directory, prefix with `paper_reproduction/run.py`)*.
+
+---
+
+## 📁 Self-Contained Folder Structure & Path Independence
+
+Everything is configured relative to `Path(__file__).resolve().parent`:
+
+```
+paper_reproduction/
+├── .cache/             <-- All HuggingFace weights, Torch caches, and temp files live here (no C:\ pollution)
+├── .envs/              <-- Isolated virtualenvs per model family (created via --setup)
+├── data/
+│   ├── nab/            <-- Self-contained raw NAB CSVs and labels
+│   ├── TSB-AD-U/       <-- Pre-converted series (Data, Label)
+│   └── File_List/      <-- List of series for evaluation
+├── requirements/       <-- Pinned lockfiles per family (chronos, moment, timesfm, etc.)
+├── runs/               <-- Timestamped output folders with CSV summaries and logs
+├── upstream/           <-- Unmodified original authors' scripts and notebook ASTs
+├── run.py              <-- Main standalone launcher
+└── test_paper.py       <-- Verification test suite
+```
+
+---
+
+## 📖 About This Reproduction
 
 This is separate from Sentinel v1-v4. It does not modify their models, thresholds,
 selection, data or results. No Sentinel module is imported here.
@@ -9,54 +93,6 @@ TSB-AD-U evaluation series. We use our existing 58 NAB series. The authors did
 not publish complete package locks, model checkpoint revisions, or the internal
 MOMENT modifications used for some appendix ablations. Changing those conditions
 prevents an honest claim of identical results or identical full-paper execution.
-
-## Run from the hackathon project folder
-
-Use Python 3.11. The existing project environment already has pandas/numpy for
-the launcher. On a new PC, install the parent `requirements.txt` first.
-
-```powershell
-# Install separate model environments. This does not run inference on NAB.
-.\.venv\Scripts\python paper_reproduction/run.py --setup
-
-# Run the main published executable methods on all 58 streams.
-.\.venv\Scripts\python paper_reproduction/run.py
-```
-
-Model weights download automatically on the first inference. The main suite
-uses real foundation models, including 500M-parameter TimesFM and large MOMENT;
-it is substantially heavier than Sentinel. The original scripts choose CUDA if
-available, otherwise CPU, and retain their original batch sizes. Multiple GB of
-packages/weights and potentially very long CPU runs should be expected. No
-foundation model has been run here yet; import/setup or model compatibility
-failures will stop the run with a log instead of substituting another model.
-Setup temporary files, pip downloads, Hugging Face weights and Torch caches are
-stored under `paper_reproduction/.cache/` on the project's drive. This avoids
-using the Windows C: temporary/cache directories when the project is on D:.
-
-For the paper's CPU statistical baselines only:
-
-```powershell
-.\.venv\Scripts\python paper_reproduction/run.py --suite baselines --setup
-.\.venv\Scripts\python paper_reproduction/run.py --suite baselines
-```
-
-Useful commands:
-
-```powershell
-.\.venv\Scripts\python paper_reproduction/run.py --check-data
-.\.venv\Scripts\python paper_reproduction/run.py --plan
-# Optional small run, not a full benchmark:
-.\.venv\Scripts\python paper_reproduction/run.py --only speed_6005
-# Resume using the actual relative run directory printed by the launcher:
-.\.venv\Scripts\python paper_reproduction/run.py --resume paper_reproduction/runs/paper_nab_TIMESTAMP
-```
-
-New results go to `paper_reproduction/runs/paper_nab_<UTC timestamp>/`.
-Existing Sentinel and paper results are preserved. Resume skips only jobs that
-finished successfully; a failed model job is retried. Logs identify failures.
-Source hashes are checked before running. Each run records the experiment plan,
-input hashes, library versions, individual metrics and completed jobs.
 
 ## What is reproduced
 

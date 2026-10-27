@@ -30,6 +30,9 @@ available, otherwise CPU, and retain their original batch sizes. Multiple GB of
 packages/weights and potentially very long CPU runs should be expected. No
 foundation model has been run here yet; import/setup or model compatibility
 failures will stop the run with a log instead of substituting another model.
+Setup temporary files, pip downloads, Hugging Face weights and Torch caches are
+stored under `paper_reproduction/.cache/` on the project's drive. This avoids
+using the Windows C: temporary/cache directories when the project is on D:.
 
 For the paper's CPU statistical baselines only:
 

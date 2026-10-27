@@ -1,5 +1,7 @@
 .envs/
+.cache/
 data/
 runs/
 __pycache__/
 *.pyc
+*.log

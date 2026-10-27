@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import venv
 
@@ -21,6 +22,25 @@ IMPORT_CHECKS = {
     'timesfm': 'from timesfm import TimesFm,TimesFmHparams,TimesFmCheckpoint',
     'timemoe': 'from transformers import AutoModelForCausalLM; import accelerate,torch',
 }
+
+
+def configure_storage():
+    """Keep setup scratch files and downloaded weights beside this project."""
+    cache = ROOT / '.cache'
+    paths = {
+        'TEMP': cache / 'tmp', 'TMP': cache / 'tmp', 'TMPDIR': cache / 'tmp',
+        'PIP_CACHE_DIR': cache / 'pip',
+        'HF_HOME': cache / 'huggingface',
+        'HF_HUB_CACHE': cache / 'huggingface' / 'hub',
+        'HUGGINGFACE_HUB_CACHE': cache / 'huggingface' / 'hub',
+        'TRANSFORMERS_CACHE': cache / 'huggingface' / 'hub',
+        'TORCH_HOME': cache / 'torch', 'XDG_CACHE_HOME': cache / 'other',
+    }
+    for key, path in paths.items():
+        path.mkdir(parents=True, exist_ok=True)
+        os.environ[key] = str(path)
+    # tempfile may already have cached the Windows system temp directory.
+    tempfile.tempdir = str(paths['TEMP'])
 
 
 def save(path, value):
@@ -43,6 +63,7 @@ def python_for(family):
 
 
 def setup(families):
+    configure_storage()
     if sys.version_info[:2] != (3, 11):
         raise RuntimeError('Use Python 3.11, as in the paper and legacy TimesFM API.')
     for family in families:
@@ -266,6 +287,7 @@ def summarize(folder):
 
 
 def main():
+    configure_storage()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--suite', choices=['baselines', 'full'], default='full')
     action = parser.add_mutually_exclusive_group()

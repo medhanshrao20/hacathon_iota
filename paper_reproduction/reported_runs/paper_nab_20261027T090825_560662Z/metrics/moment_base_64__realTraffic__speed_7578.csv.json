@@ -1,0 +1,16 @@
+{
+  "file_name": "realTraffic__speed_7578.csv",
+  "method": "moment_base_64",
+  "status": "ok",
+  "rows": 1127,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.5767734986570192,
+  "AUC-ROC": 0.9202991234353151,
+  "VUS-PR": 0.8171705781518207,
+  "VUS-ROC": 0.9611029569368803,
+  "Standard-F1": 0.6016899167321312,
+  "PA-F1": 0.7131147540983607,
+  "Event-based-F1": 0.6678635547576296,
+  "R-based-F1": 0.6050866873959125,
+  "Affiliation-F": 0.8604146447236837
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "realTweets__Twitter_volume_FB.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 15833,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.35767347234988195,
+  "AUC-ROC": 0.6455743208208335,
+  "VUS-PR": 0.3439338970477261,
+  "VUS-ROC": 0.6619913194400735,
+  "Standard-F1": 0.41376057696286006,
+  "PA-F1": 0.9962216624685138,
+  "Event-based-F1": 0.9771863117870717,
+  "R-based-F1": 0.47885096850704967,
+  "Affiliation-F": 0.7725534203232062
+}

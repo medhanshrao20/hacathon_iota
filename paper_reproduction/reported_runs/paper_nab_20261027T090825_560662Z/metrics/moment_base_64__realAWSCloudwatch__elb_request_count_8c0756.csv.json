@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__elb_request_count_8c0756.csv",
+  "method": "moment_base_64",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.4044009761900972,
+  "AUC-ROC": 0.6393994216246591,
+  "VUS-PR": 0.4061185176243248,
+  "VUS-ROC": 0.6579254579562503,
+  "Standard-F1": 0.4407369358353171,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.49855938533774413,
+  "Affiliation-F": 0.9873855031238855
+}

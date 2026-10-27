@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialWithAnomaly__art_daily_nojump.csv",
+  "method": "var_256",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.05935141845620185,
+  "AUC-ROC": 0.14272879006787753,
+  "VUS-PR": 0.07165732410877068,
+  "VUS-ROC": 0.19215561394118436,
+  "Standard-F1": 0.1817345371958197,
+  "PA-F1": 0.5387700534759359,
+  "Event-based-F1": 0.1813670200766973,
+  "R-based-F1": 0.17895593096954143,
+  "Affiliation-F": 0.7669853074114729
+}

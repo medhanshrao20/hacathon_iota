@@ -1,5 +1,18 @@
 # Sentinel v4: controlled anomaly-detection experiments
 
+## Latest reported results and presentation
+
+- [Ten-slide Sentinel presentation](submission/Sentinel_Unbreakabale_Loop.pptx)
+- [Imported benchmark results and interpretation](paper_reproduction/reported_runs/paper_nab_20261027T090825_560662Z/README.md)
+- [Complete-method comparison](paper_reproduction/reported_runs/paper_nab_20261027T090825_560662Z/summary.csv)
+
+Best mean offline event-F1: **73.64%** (centered variance,64 readings).
+Best VUS-PR: **45.82%** (variance,256 readings). These are full-series benchmark
+results with evaluation-selected thresholds, not hidden-test streaming scores.
+Twelve methods completed58 streams; a further configuration stopped after18.
+The presentation reports operational precision, recall, delay and runtime
+separately. Add team member names on slide1 before submission.
+
 CPU-only PS2 project. One application entry point: `run.py`. All 58 pinned public
 NAB streams are included. The new experiment workflow is implemented and checked,
 but **the full real-data v4 run has not been started**. The user will run it.

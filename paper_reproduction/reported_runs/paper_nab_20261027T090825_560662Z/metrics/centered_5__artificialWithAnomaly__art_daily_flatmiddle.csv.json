@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialWithAnomaly__art_daily_flatmiddle.csv",
+  "method": "centered_5",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.09108596020759532,
+  "AUC-ROC": 0.2994706961497777,
+  "VUS-PR": 0.09553426843415834,
+  "VUS-ROC": 0.31637135853576803,
+  "Standard-F1": 0.1817345371958197,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.3360858794384806,
+  "Affiliation-F": 0.9710416764292031
+}

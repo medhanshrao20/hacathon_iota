@@ -1,0 +1,16 @@
+{
+  "file_name": "realAdExchange__exchange-4_cpm_results.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 1643,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.18942246286079062,
+  "AUC-ROC": 0.6548261020135557,
+  "VUS-PR": 0.4391151100317916,
+  "VUS-ROC": 0.753038451192864,
+  "Standard-F1": 0.32638398541317426,
+  "PA-F1": 0.6259541984732825,
+  "Event-based-F1": 0.44047619047619,
+  "R-based-F1": 0.41957691189602875,
+  "Affiliation-F": 0.7628641433225285
+}

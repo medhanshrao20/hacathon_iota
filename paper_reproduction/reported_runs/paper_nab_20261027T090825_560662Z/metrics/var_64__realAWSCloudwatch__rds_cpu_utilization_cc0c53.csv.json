@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__rds_cpu_utilization_cc0c53.csv",
+  "method": "var_64",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.6342880977327353,
+  "AUC-ROC": 0.9014658114386744,
+  "VUS-PR": 0.7469709478866765,
+  "VUS-ROC": 0.9456565364521096,
+  "Standard-F1": 0.6492704988392033,
+  "PA-F1": 0.9792935444579781,
+  "Event-based-F1": 0.8874172185430459,
+  "R-based-F1": 0.45353992696298717,
+  "Affiliation-F": 0.9660375118985338
+}

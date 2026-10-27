@@ -1,0 +1,12 @@
+{
+  "scope": "Separate chronological streaming evaluation; not the offline benchmark",
+  "tp": 14,
+  "fp": 43,
+  "fn": 8,
+  "f1": 0.35443037974683544,
+  "precision": 0.24561403508771928,
+  "recall": 0.6363636363636364,
+  "mean_delay_seconds": 40885.71428571428,
+  "median_stream_p50_ms": 1.0597500076983124,
+  "runtime_definition": "median of 58 per-stream P50 measurements; feature construction, forecast and scoring; excludes fitting and file I/O"
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialWithAnomaly__art_increase_spike_density.csv",
+  "method": "moment_base_512",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.6121188335145786,
+  "AUC-ROC": 0.9411748617252667,
+  "VUS-PR": 0.6718200898342328,
+  "VUS-ROC": 0.9513219584172218,
+  "Standard-F1": 0.6211649915816321,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.3360858794384806,
+  "Affiliation-F": 0.9881160124392872
+}

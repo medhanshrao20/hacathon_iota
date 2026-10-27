@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__ambient_temperature_system_failure.csv",
+  "method": "var_96",
+  "status": "ok",
+  "rows": 7267,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.1699453761463996,
+  "AUC-ROC": 0.6271989396824353,
+  "VUS-PR": 0.19880846239718297,
+  "VUS-ROC": 0.6680975711936121,
+  "Standard-F1": 0.30971845152160127,
+  "PA-F1": 0.8278221208665907,
+  "Event-based-F1": 0.4354322305229452,
+  "R-based-F1": 0.3294314381270903,
+  "Affiliation-F": 0.6732430963326173
+}

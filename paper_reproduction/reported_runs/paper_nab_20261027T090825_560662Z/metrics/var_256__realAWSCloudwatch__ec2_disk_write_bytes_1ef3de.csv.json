@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__ec2_disk_write_bytes_1ef3de.csv",
+  "method": "var_256",
+  "status": "ok",
+  "rows": 4719,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.1694206000148368,
+  "AUC-ROC": 0.6794767168004907,
+  "VUS-PR": 0.17293127160321067,
+  "VUS-ROC": 0.6886588179378522,
+  "Standard-F1": 0.30709999191980414,
+  "PA-F1": 0.6850108616944244,
+  "Event-based-F1": 0.40160642570281085,
+  "R-based-F1": 0.4667418263810597,
+  "Affiliation-F": 0.8281382394432202
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__machine_temperature_system_failure.csv",
+  "method": "centered_5",
+  "status": "ok",
+  "rows": 22683,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.10841391417881441,
+  "AUC-ROC": 0.4961671636298136,
+  "VUS-PR": 0.11092073015963051,
+  "VUS-ROC": 0.5204276408238365,
+  "Standard-F1": 0.18253828548319598,
+  "PA-F1": 0.9956101843722563,
+  "Event-based-F1": 0.7741935483870963,
+  "R-based-F1": 0.25912654443584976,
+  "Affiliation-F": 0.801292290917663
+}

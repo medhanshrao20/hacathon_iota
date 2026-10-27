@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__ec2_network_in_257a54.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.7447947494291534,
+  "AUC-ROC": 0.8879545595960854,
+  "VUS-PR": 0.7523070687856226,
+  "VUS-ROC": 0.8986123186264516,
+  "Standard-F1": 0.7879651496247323,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.8345864661654135,
+  "Affiliation-F": 0.996831327536396
+}

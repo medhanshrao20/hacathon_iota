@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialWithAnomaly__art_load_balancer_spikes.csv",
+  "method": "centered_5",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.20476369979061698,
+  "AUC-ROC": 0.649888169946126,
+  "VUS-PR": 0.23207758011340102,
+  "VUS-ROC": 0.6693326301793421,
+  "Standard-F1": 0.34782110620049667,
+  "PA-F1": 0.9841269841269841,
+  "Event-based-F1": 0.5552941176470584,
+  "R-based-F1": 0.28293268212808603,
+  "Affiliation-F": 0.8037692408149181
+}

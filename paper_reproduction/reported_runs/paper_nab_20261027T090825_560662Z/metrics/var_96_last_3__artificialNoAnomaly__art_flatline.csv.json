@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialNoAnomaly__art_flatline.csv",
+  "method": "var_96_last_3",
+  "status": "undefined_nonfinite_scores_in_original_formula",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": null,
+  "AUC-ROC": null,
+  "VUS-PR": null,
+  "VUS-ROC": null,
+  "Standard-F1": null,
+  "PA-F1": null,
+  "Event-based-F1": null,
+  "R-based-F1": null,
+  "Affiliation-F": null
+}

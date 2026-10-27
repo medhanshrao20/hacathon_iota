@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__ec2_cpu_utilization_24ae8d.csv",
+  "method": "var_256",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.6728649238850543,
+  "AUC-ROC": 0.9184977317270397,
+  "VUS-PR": 0.8959123530664509,
+  "VUS-ROC": 0.9801555672767728,
+  "Standard-F1": 0.7916070721358909,
+  "PA-F1": 0.7936821322803553,
+  "Event-based-F1": 0.7803347280334723,
+  "R-based-F1": 0.688803628370473,
+  "Affiliation-F": 0.8901822130561907
+}

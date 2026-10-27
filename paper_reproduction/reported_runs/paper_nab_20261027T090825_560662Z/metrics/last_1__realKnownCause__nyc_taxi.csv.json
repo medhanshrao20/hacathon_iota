@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__nyc_taxi.csv",
+  "method": "last_1",
+  "status": "ok",
+  "rows": 10320,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.08798318453369564,
+  "AUC-ROC": 0.4409597319451924,
+  "VUS-PR": 0.10013919454552311,
+  "VUS-ROC": 0.5036469720306165,
+  "Standard-F1": 0.1823129458452632,
+  "PA-F1": 0.71875,
+  "Event-based-F1": 0.5333333333333329,
+  "R-based-F1": 0.14960858219773845,
+  "Affiliation-F": 0.6857881208076764
+}

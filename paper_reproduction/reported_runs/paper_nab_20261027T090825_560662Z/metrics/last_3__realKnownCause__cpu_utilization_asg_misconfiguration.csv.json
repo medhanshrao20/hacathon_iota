@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__cpu_utilization_asg_misconfiguration.csv",
+  "method": "last_3",
+  "status": "ok",
+  "rows": 18050,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.10251372332023062,
+  "AUC-ROC": 0.5803152598177448,
+  "VUS-PR": 0.10096081038273969,
+  "VUS-ROC": 0.5855979748354749,
+  "Standard-F1": 0.19613389016970056,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.33407423871971553,
+  "Affiliation-F": 0.9823645542518045
+}

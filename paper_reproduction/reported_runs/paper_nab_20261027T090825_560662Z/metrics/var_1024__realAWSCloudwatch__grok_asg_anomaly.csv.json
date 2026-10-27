@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__grok_asg_anomaly.csv",
+  "method": "var_1024",
+  "status": "ok",
+  "rows": 4621,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.39741136369121377,
+  "AUC-ROC": 0.541324112308154,
+  "VUS-PR": 0.23380866840114575,
+  "VUS-ROC": 0.43532494889328177,
+  "Standard-F1": 0.4944140305387744,
+  "PA-F1": 0.5,
+  "Event-based-F1": 0.4999999999999996,
+  "R-based-F1": 0.488296488946684,
+  "Affiliation-F": 0.6716364456167369
+}

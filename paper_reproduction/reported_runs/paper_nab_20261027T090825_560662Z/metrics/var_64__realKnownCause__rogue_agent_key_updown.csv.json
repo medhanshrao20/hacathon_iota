@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__rogue_agent_key_updown.csv",
+  "method": "var_64",
+  "status": "ok",
+  "rows": 5315,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.1260786416470033,
+  "AUC-ROC": 0.5752157883322491,
+  "VUS-PR": 0.1535916190873017,
+  "VUS-ROC": 0.6162751527009367,
+  "Standard-F1": 0.2691851010116864,
+  "PA-F1": 0.6134259259259259,
+  "Event-based-F1": 0.22600619195046404,
+  "R-based-F1": 0.22059862925680013,
+  "Affiliation-F": 0.6268234473667766
+}

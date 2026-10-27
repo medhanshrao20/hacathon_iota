@@ -1,0 +1,16 @@
+{
+  "file_name": "realTweets__Twitter_volume_AMZN.csv",
+  "method": "var_96_last_3",
+  "status": "ok",
+  "rows": 15831,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.3620639331780304,
+  "AUC-ROC": 0.7303134845522721,
+  "VUS-PR": 0.3430521289080167,
+  "VUS-ROC": 0.7634440628951162,
+  "Standard-F1": 0.37658538765816807,
+  "PA-F1": 0.8476394849785408,
+  "Event-based-F1": 0.7534649307013854,
+  "R-based-F1": 0.42999036840837945,
+  "Affiliation-F": 0.8298177463137374
+}

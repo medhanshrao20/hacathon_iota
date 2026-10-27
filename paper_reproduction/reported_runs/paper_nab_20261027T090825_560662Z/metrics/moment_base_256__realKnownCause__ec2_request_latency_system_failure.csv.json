@@ -1,0 +1,16 @@
+{
+  "file_name": "realKnownCause__ec2_request_latency_system_failure.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 4021,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.5279139646677464,
+  "AUC-ROC": 0.9545987180999569,
+  "VUS-PR": 0.701394196659337,
+  "VUS-ROC": 0.9698150582399829,
+  "Standard-F1": 0.637101369743471,
+  "PA-F1": 0.7899543378995434,
+  "Event-based-F1": 0.7041847041847036,
+  "R-based-F1": 0.6709442984962525,
+  "Affiliation-F": 0.9529337849001855
+}

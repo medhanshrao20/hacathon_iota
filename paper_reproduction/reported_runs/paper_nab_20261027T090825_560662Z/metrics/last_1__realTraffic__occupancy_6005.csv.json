@@ -1,0 +1,16 @@
+{
+  "file_name": "realTraffic__occupancy_6005.csv",
+  "method": "last_1",
+  "status": "ok",
+  "rows": 2380,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.08931756082711893,
+  "AUC-ROC": 0.4283436160711669,
+  "VUS-PR": 0.09922784363061654,
+  "VUS-ROC": 0.479843050695036,
+  "Standard-F1": 0.18251075076140963,
+  "PA-F1": 0.9979123173277662,
+  "Event-based-F1": 0.6666666666666662,
+  "R-based-F1": 0.2891136228435455,
+  "Affiliation-F": 0.6919506373744948
+}

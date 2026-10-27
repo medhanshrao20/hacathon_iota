@@ -1,0 +1,16 @@
+{
+  "file_name": "realAWSCloudwatch__ec2_cpu_utilization_c6585a.csv",
+  "method": "var_512",
+  "status": "undefined_single_class_labels",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": null,
+  "AUC-ROC": null,
+  "VUS-PR": null,
+  "VUS-ROC": null,
+  "Standard-F1": null,
+  "PA-F1": null,
+  "Event-based-F1": null,
+  "R-based-F1": null,
+  "Affiliation-F": null
+}

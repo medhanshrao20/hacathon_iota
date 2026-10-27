@@ -1,0 +1,16 @@
+{
+  "file_name": "realTweets__Twitter_volume_CRM.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 15902,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.6578705491080361,
+  "AUC-ROC": 0.847116773419527,
+  "VUS-PR": 0.6700160613937058,
+  "VUS-ROC": 0.8715665449969756,
+  "Standard-F1": 0.6412063351441469,
+  "PA-F1": 0.9866831836481883,
+  "Event-based-F1": 0.9679821295606844,
+  "R-based-F1": 0.5662856628566286,
+  "Affiliation-F": 0.9790881231306907
+}

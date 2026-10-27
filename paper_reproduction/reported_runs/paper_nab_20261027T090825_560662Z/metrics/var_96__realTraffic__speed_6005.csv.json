@@ -1,0 +1,16 @@
+{
+  "file_name": "realTraffic__speed_6005.csv",
+  "method": "var_96",
+  "status": "ok",
+  "rows": 2500,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.5200268163672084,
+  "AUC-ROC": 0.8005399913764228,
+  "VUS-PR": 0.5127379941400207,
+  "VUS-ROC": 0.8005959969458862,
+  "Standard-F1": 0.5731302394588886,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.6853685368536854,
+  "Affiliation-F": 0.9920341173255413
+}

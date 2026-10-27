@@ -1,0 +1,16 @@
+{
+  "file_name": "realTraffic__speed_t4013.csv",
+  "method": "centered_5",
+  "status": "ok",
+  "rows": 2494,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.16035335162366798,
+  "AUC-ROC": 0.5380258467023172,
+  "VUS-PR": 0.19388626220556807,
+  "VUS-ROC": 0.6404831753686021,
+  "Standard-F1": 0.1871265439914161,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.3421750663129974,
+  "Affiliation-F": 0.9199677755507268
+}

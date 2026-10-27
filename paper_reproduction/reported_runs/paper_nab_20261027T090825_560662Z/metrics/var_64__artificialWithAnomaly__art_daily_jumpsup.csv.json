@@ -1,0 +1,16 @@
+{
+  "file_name": "artificialWithAnomaly__art_daily_jumpsup.csv",
+  "method": "var_64",
+  "status": "ok",
+  "rows": 4032,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.38917574759465257,
+  "AUC-ROC": 0.5505929283473973,
+  "VUS-PR": 0.3919487293338231,
+  "VUS-ROC": 0.5710256708619433,
+  "Standard-F1": 0.45574022055632796,
+  "PA-F1": 1.0,
+  "Event-based-F1": 0.9999999999999996,
+  "R-based-F1": 0.4757942511346445,
+  "Affiliation-F": 0.988791514515426
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "realTweets__Twitter_volume_AAPL.csv",
+  "method": "last_1",
+  "status": "ok",
+  "rows": 15902,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.16781312041362956,
+  "AUC-ROC": 0.6123889560131894,
+  "VUS-PR": 0.18308344538996713,
+  "VUS-ROC": 0.6474040546845077,
+  "Standard-F1": 0.23825199157533622,
+  "PA-F1": 0.9915704027474243,
+  "Event-based-F1": 0.5846153846153841,
+  "R-based-F1": 0.2564160399235926,
+  "Affiliation-F": 0.8278756382298996
+}

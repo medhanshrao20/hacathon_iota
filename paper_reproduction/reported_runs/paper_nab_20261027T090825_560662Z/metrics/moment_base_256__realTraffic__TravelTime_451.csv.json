@@ -1,0 +1,16 @@
+{
+  "file_name": "realTraffic__TravelTime_451.csv",
+  "method": "moment_base_256",
+  "status": "ok",
+  "rows": 2162,
+  "evaluation": "offline_full_series_oracle_benchmark",
+  "AUC-PR": 0.24745926303777763,
+  "AUC-ROC": 0.8485399168374539,
+  "VUS-PR": 0.270908743340815,
+  "VUS-ROC": 0.8602892700562318,
+  "Standard-F1": 0.4985952087468393,
+  "PA-F1": 0.6749611197511665,
+  "Event-based-F1": 0.5243004418262146,
+  "R-based-F1": 0.5298583667692195,
+  "Affiliation-F": 0.8863710197303901
+}

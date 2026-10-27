@@ -1,4 +1,4 @@
-# Preserved v1 public-test baseline
+# Preserved public-test baselines
 
 Original completed run: `results/experiment_20261026T170123_524711Z`.
 The run's existing files remain unchanged and ignored by Git. Do not delete them
@@ -19,3 +19,20 @@ The selected system raised 128 alert episodes: 12 first correct detections,
 v2 adds seasonality, stronger validation and calibrated incident handling.
 The same public test is already known: v2 results are exploratory comparisons,
 not a new independent test. Independent confirmation needs hidden/unseen data.
+
+## Completed v2 baseline
+
+Run: `results/experiment_v2_20261026T190642_888274Z`; all 58 streams succeeded.
+
+| Method | Detected events | False/duplicate alerts | Event F1 |
+|---|---:|---:|---:|
+| Selected system | 14 / 22 | 43 | .354430 |
+| Recent mean | 14 / 22 | 38 | .378378 |
+| Single-horizon Ridge | 11 / 22 | 33 | .333333 |
+| Multi-horizon Ridge | 12 / 22 | 47 | .296296 |
+| Rolling median/MAD | 10 / 22 | 167 | .100503 |
+| Seasonal naive | 15 / 22 | 57 | .319149 |
+
+Selected precision .245614, recall .636364. The 57 proposed alert episodes
+include 14 correct first detections, 36 outside-window alerts and 7 duplicates.
+Eight events were missed. This baseline is preserved for comparison with v3.

@@ -35,11 +35,15 @@ def evaluate(timestamps, event_ids, flags, eligible):
     point_tp = int((flags & truth & eligible).sum())
     point_fp = int((flags & ~truth & eligible).sum())
     point_fn = int((~flags & truth & eligible).sum())
+    point_tn = int((~flags & ~truth & eligible).sum())
     return {"event_f1": f1, "event_precision": precision, "event_recall": recall,
             "true_events": len(events), "detected_events": tp, "false_alerts": false_alerts,
             "missed_events": fn, "alert_episodes": int(onset.sum()),
             "mean_delay_seconds": float(np.mean(delays)) if delays else None,
             "point_f1": 2 * point_tp / max(1, 2 * point_tp + point_fp + point_fn),
+            "point_accuracy": (point_tp + point_tn) / max(1, int(eligible.sum())),
+            "true_positive_points": point_tp, "true_negative_points": point_tn,
+            "false_negative_points": point_fn,
             "false_positive_points": point_fp, "eligible_points": int(eligible.sum()),
             "normal_alert_episodes": normal_alerts, "duplicate_alert_episodes": duplicate_alerts,
             "normal_points": int((eligible & ~truth).sum()),

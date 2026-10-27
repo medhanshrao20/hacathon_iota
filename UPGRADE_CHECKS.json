@@ -1,648 +1,666 @@
 {
-  "synthetic_tests_passed": 17,
-  "synthetic_test_seconds": 21.929,
+  "version": 3,
+  "synthetic_tests_passed": 23,
+  "synthetic_test_seconds": 24.957,
   "data_and_fold_checks_passed": 58,
-  "full_v2_run_started": false,
-  "readiness_is_not_performance_evaluation": true,
-  "series_missing_any_family": [],
-  "series": [
-    {
-      "series": "artificialNoAnomaly/art_daily_no_noise.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialNoAnomaly/art_daily_perfect_square_wave.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialNoAnomaly/art_daily_small_noise.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialNoAnomaly/art_flatline.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialNoAnomaly/art_noisy.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_daily_flatmiddle.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_daily_jumpsdown.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_daily_jumpsup.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_daily_nojump.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_increase_spike_density.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "artificialWithAnomaly/art_load_balancer_spikes.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-2_cpc_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-2_cpm_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-3_cpc_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-3_cpm_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-4_cpc_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAdExchange/exchange-4_cpm_results.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_network_in_257a54.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/ec2_network_in_5abac7.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/elb_request_count_8c0756.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/grok_asg_anomaly.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/ambient_temperature_system_failure.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/cpu_utilization_asg_misconfiguration.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/ec2_request_latency_system_failure.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/machine_temperature_system_failure.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/nyc_taxi.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/rogue_agent_key_hold.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realKnownCause/rogue_agent_key_updown.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/occupancy_6005.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/occupancy_t4013.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/speed_6005.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/speed_7578.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/speed_t4013.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/TravelTime_387.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTraffic/TravelTime_451.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_AAPL.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_AMZN.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_CRM.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_CVS.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_FB.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_GOOG.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_IBM.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_KO.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_PFE.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    },
-    {
-      "series": "realTweets/Twitter_volume_UPS.csv",
-      "feasible_families": [
-        "recent_mean",
-        "ridge_multi",
-        "ridge_single",
-        "rolling_median_mad",
-        "seasonal_naive"
-      ],
-      "clean_train_window_check_only": true
-    }
-  ]
+  "data_hashes_verified": 70,
+  "full_real_data_run_completed": true,
+  "completed_series": 58,
+  "stream_failures": 0,
+  "family_test_records": 406,
+  "chronological_fold_trials": 144288,
+  "rejected_candidate_fold_fits": 15,
+  "event_f1_improved": false,
+  "results_file": "V3_RUN_RESULTS.json",
+  "selection_audit_policies": 13,
+  "chosen_development_policy": "original_transfer",
+  "evaluation_status": "Exploratory replay of previously inspected public test",
+  "historical_v2_preparation": {
+    "synthetic_tests_passed": 17,
+    "synthetic_test_seconds": 21.929,
+    "data_and_fold_checks_passed": 58,
+    "full_v2_run_started": false,
+    "readiness_is_not_performance_evaluation": true,
+    "series_missing_any_family": [],
+    "series": [
+      {
+        "series": "artificialNoAnomaly/art_daily_no_noise.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialNoAnomaly/art_daily_perfect_square_wave.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialNoAnomaly/art_daily_small_noise.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialNoAnomaly/art_flatline.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialNoAnomaly/art_noisy.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_daily_flatmiddle.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_daily_jumpsdown.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_daily_jumpsup.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_daily_nojump.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_increase_spike_density.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "artificialWithAnomaly/art_load_balancer_spikes.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-2_cpc_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-2_cpm_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-3_cpc_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-3_cpm_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-4_cpc_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAdExchange/exchange-4_cpm_results.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_network_in_257a54.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/ec2_network_in_5abac7.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/elb_request_count_8c0756.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/grok_asg_anomaly.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/ambient_temperature_system_failure.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/cpu_utilization_asg_misconfiguration.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/ec2_request_latency_system_failure.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/machine_temperature_system_failure.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/nyc_taxi.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/rogue_agent_key_hold.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realKnownCause/rogue_agent_key_updown.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/occupancy_6005.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/occupancy_t4013.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/speed_6005.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/speed_7578.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/speed_t4013.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/TravelTime_387.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTraffic/TravelTime_451.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_AAPL.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_AMZN.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_CRM.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_CVS.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_FB.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_GOOG.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_IBM.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_KO.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_PFE.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      },
+      {
+        "series": "realTweets/Twitter_volume_UPS.csv",
+        "feasible_families": [
+          "recent_mean",
+          "ridge_multi",
+          "ridge_single",
+          "rolling_median_mad",
+          "seasonal_naive"
+        ],
+        "clean_train_window_check_only": true
+      }
+    ]
+  }
 }

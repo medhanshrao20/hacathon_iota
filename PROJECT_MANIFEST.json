@@ -12,13 +12,13 @@
     },
     {
       "path": "BASELINE.md",
-      "bytes": 1081,
-      "sha256": "81db41662996409d6d8dccecbd58024f7ef78f0217f595ff99373dc55d97b34c"
+      "bytes": 1784,
+      "sha256": "b65fdde7d6bc68dd9b1c3f0d28b9717818e1b30be823870459560ea612b60e2b"
     },
     {
       "path": "config.json",
-      "bytes": 1130,
-      "sha256": "7d0c8507c1503916b1016312fe2a00713056a28f069e24047b9093b1622e2a42"
+      "bytes": 1345,
+      "sha256": "429442357e3d469b6e0a1c66457db2b3b877a810644948051bc957857f39fa35"
     },
     {
       "path": "data/nab/data/artificialNoAnomaly/art_daily_no_noise.csv",
@@ -382,18 +382,18 @@
     },
     {
       "path": "METHODOLOGY.md",
-      "bytes": 10206,
-      "sha256": "98dd0b5a7073beec752875c14133c01bab55cfc8438c0b187475bf75af2857ca"
+      "bytes": 12882,
+      "sha256": "cac253f4913092f948fa3e5ce79c06a341e04ecb1aa9a0342904027f53f08950"
     },
     {
       "path": "PREPARATION_STATUS.md",
-      "bytes": 2607,
-      "sha256": "cd8424d48aeedd5ee77f200c08d1a06d39d7a9f331c4d183348b66cc92c8368e"
+      "bytes": 3998,
+      "sha256": "fb2c64d2bd55ea9f4ac85eecad60a0b6cf87cbc7e04999f9c00f378f14bcf51b"
     },
     {
       "path": "README.md",
-      "bytes": 10042,
-      "sha256": "f4be27d6023d62e9c786b1d301365bf34017c5d5e45f77265bb69a0eebf4e23b"
+      "bytes": 11908,
+      "sha256": "e01457759cbd56f474dc80a3e3456f0b3d568e8383f35e11be968f73897d38e1"
     },
     {
       "path": "references/paper.pdf",
@@ -432,18 +432,23 @@
     },
     {
       "path": "references/README.md",
-      "bytes": 3397,
-      "sha256": "dd6a10927ae0115c5478f073cc0023e7b3265243da148e9c0d479e10b221e8a1"
+      "bytes": 4181,
+      "sha256": "a9300d2444a5245f5140f6887da9b4b5a09ccdea495650e0352997696a0d4aec"
     },
     {
       "path": "requirements.txt",
-      "bytes": 162,
-      "sha256": "594ddd0c5aa53e982e1676f41979bdf8f7d44d9af85e367cc5802ce28b05af0a"
+      "bytes": 183,
+      "sha256": "f1ae29462389fd9afbecebbbdf8d20e14a3458ca521f04bd1c93953f069fa7be"
     },
     {
       "path": "run.py",
       "bytes": 147,
       "sha256": "9285d759004c9b25ed36328c6b251bc0b633597aa9e6126690c61fe0eeb3663c"
+    },
+    {
+      "path": "SELECTION_POLICY_DEVELOPMENT.json",
+      "bytes": 9860,
+      "sha256": "110e05029e877e726e87f9c8a28ca57c4a1b54c74a099f4c099ccb99efc5f990"
     },
     {
       "path": "sentinel/__init__.py",
@@ -457,33 +462,38 @@
     },
     {
       "path": "sentinel/detection.py",
-      "bytes": 5700,
-      "sha256": "0065ad27bc6e978497514a51297c5ba0976ae28c7e6c9bbaa42ed4bc54cc3e28"
+      "bytes": 7460,
+      "sha256": "0b72bb1eeb0247b9391a37607890a5d048c7de55ecf411d99d77c04d2c7126d2"
     },
     {
       "path": "sentinel/evaluation.py",
-      "bytes": 2587,
-      "sha256": "13d96b3cbee52e7f84bb335405a099f803656d6e5485c92d475c93d96964c83d"
+      "bytes": 2852,
+      "sha256": "bf09afaf773304fca924386de8ac93a1eb630ad3e5956ef096d789bbf7deee51"
     },
     {
       "path": "sentinel/models.py",
-      "bytes": 7021,
-      "sha256": "cef6cc4b367800b96c2d6404bcb896e9f338d6914c588d897cbac9eea281cec6"
+      "bytes": 12179,
+      "sha256": "52d67f9207233e7d9a9dd0fea231b0505d19ed464bf1253cef917e559086ff63"
     },
     {
       "path": "sentinel/pipeline.py",
-      "bytes": 16451,
-      "sha256": "8b4a92e301ffb03d8a63ee673ad197c88cbe802eb773164cbdc3c588b52528b2"
+      "bytes": 17801,
+      "sha256": "e9102bf4621c3d6fa0e882249d3a8a9167b4570814cb4430b7aada56618d9dbd"
     },
     {
       "path": "sentinel/reporting.py",
-      "bytes": 6931,
-      "sha256": "a2d044967ab43fb9cc0a8d673941926a3922c9f147b58dcfbe72a680b6a15dbe"
+      "bytes": 7623,
+      "sha256": "c9342665705c0ba707e0cfe6d470bfff847c4de4a7e7a4e50c78bca0359d7a3d"
+    },
+    {
+      "path": "sentinel/selection_policy.py",
+      "bytes": 6477,
+      "sha256": "ad6a4170a90ae80becf6b7c1692f0ffcdd80867a4a35cb272196ab106f87c5e7"
     },
     {
       "path": "sentinel/validation.py",
-      "bytes": 12816,
-      "sha256": "66d31009a748d4e3913f128288f087176e737ee2efba6085e5d91b5d857172d1"
+      "bytes": 14322,
+      "sha256": "518f51588d76d5451defb60c8c1b9d1a7774af42ca9eb0614947221c1a0527bd"
     },
     {
       "path": "tests/test_invariants.py",
@@ -496,14 +506,39 @@
       "sha256": "408140ae6b3cf77024f1bf99da825d14b5b954de8d74844781bfd54ea80ad668"
     },
     {
+      "path": "tests/test_new_detectors.py",
+      "bytes": 7957,
+      "sha256": "bf1258e0d3b9918e9f1e378b13bf5a50dbeee030251e81c27cdd74b244705829"
+    },
+    {
       "path": "tests/test_pipeline.py",
-      "bytes": 5672,
-      "sha256": "df74e85df9f6131ba947da6b02636d06b28ad7695376d6400a973a258ba91aa2"
+      "bytes": 6128,
+      "sha256": "e28d28432f4443aad5ea31abac3d1209539a6c9e013c6c921f560d1179a99e98"
+    },
+    {
+      "path": "tests/test_selection_policy.py",
+      "bytes": 2179,
+      "sha256": "43b8c21e8d5a1e91c27f2156b11df7cb345afd77aa6b9f6691d671ce9e381653"
     },
     {
       "path": "UPGRADE_CHECKS.json",
-      "bytes": 17201,
-      "sha256": "0828287da9dc67861723d58cebc7ad3e3d3e103f7538cf6c5761d3f61be47e63"
+      "bytes": 18467,
+      "sha256": "0d5d7eec7afa75e6e7cfd2f734ef73ab76b278a4320851b63043a33f58d9d668"
+    },
+    {
+      "path": "V3_RESULTS.md",
+      "bytes": 3563,
+      "sha256": "01e220ec4ab1f74034d30f70998d1e6faa698f49d9123be279637f971cc73cfe"
+    },
+    {
+      "path": "V3_RUN_RESULTS.json",
+      "bytes": 3723,
+      "sha256": "114de018bd7a6350415c1b37762e20aba930d80f8ebf9e602344e7b77f3e6d21"
+    },
+    {
+      "path": "V3_SELECTED_PARAMETERS.json",
+      "bytes": 89930,
+      "sha256": "1a93e604e1521a04e5a12e265b566b0a3b7afafeb48ab1877e12d5a171cefda2"
     }
   ]
 }

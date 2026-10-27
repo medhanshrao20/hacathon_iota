@@ -1,5 +1,29 @@
 # Preparation status
 
+## v3 current upgrade
+
+Added bounded histogram gradient boosting, training-normal shape/state novelty
+and sparse-event selection shrinkage with local false-alert checks. Accelerated
+score arithmetic preserves sequential decision/update order, verified against
+an independent scalar oracle. All 20 tests initially passed in 20.416 seconds;
+a further sparse-transfer regression also passed. All 58 data/fold checks passed.
+
+The user-authorized v3 run completed all 58 streams in 47.8 minutes, with
+144,288 fold trials and zero stream failures. Fifteen candidate-fold fits were
+rejected for insufficient clean training windows. Event-F1 decreased from
+.354430 to .341463: still 14/22 detected events, 46 false alerts and 8 misses.
+This is an unsuccessful performance experiment, not a claimed improvement.
+Previous runs remain intact. See V3_RESULTS.md.
+
+The final suite passed all 23 tests (24.957 seconds). A subsequent development-only
+audit compared 13 selection policies using earlier-to-later folds and still
+favored the existing policy. It did not change the production model choices.
+Model/scoring/selection source hashes match the full run. Only the read-only
+audit CLI was added afterward. Older preparation-only entries below are history.
+
+v2 finished successfully on all 58 series: selected event-F1 .354430,
+14/22 true events detected, 43 false/duplicate alerts, 8 missed events.
+
 ## v2 upgrade status
 
 The upgrade implements three chronological folds, source/time-isolated pooling,

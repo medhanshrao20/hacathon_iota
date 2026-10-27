@@ -1,0 +1,3188 @@
+{
+  "artificialNoAnomaly/art_daily_no_noise.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "artificialNoAnomaly/art_daily_perfect_square_wave.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "artificialNoAnomaly/art_daily_small_noise.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "artificialNoAnomaly/art_flatline.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "artificialNoAnomaly/art_noisy.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "artificialWithAnomaly/art_daily_flatmiddle.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "artificialWithAnomaly/art_daily_jumpsdown.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.7082152974504249,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.3333333333333333
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "artificialWithAnomaly/art_daily_jumpsup.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.7082152974504249,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.3333333333333333
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "artificialWithAnomaly/art_daily_nojump.csv": {
+    "winner": "ridge_multi",
+    "candidate": "8ca09eb15042954e",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.45454545454545453,
+      "event_precision": 0.5263157894736842,
+      "event_recall": 0.4,
+      "detected_events": 10,
+      "false_alerts": 9,
+      "missed_events": 15,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.3107091072291652,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 8.666666666666668,
+      "event_fold_f1_sq_sum": 7.777777777777779,
+      "event_fold_f1_std": 0.44536177141512334
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "artificialWithAnomaly/art_increase_spike_density.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 0.5,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.7082152974504249,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5238095238095238,
+      "event_precision": 0.6470588235294118,
+      "event_recall": 0.44,
+      "detected_events": 11,
+      "false_alerts": 6,
+      "missed_events": 14,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.20713940481944348,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 9.5,
+      "event_fold_f1_sq_sum": 8.583333333333334,
+      "event_fold_f1_std": 0.4513142729880752
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "artificialWithAnomaly/art_load_balancer_spikes.csv": {
+    "winner": "ridge_multi",
+    "candidate": "8ca09eb15042954e",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.45454545454545453,
+      "event_precision": 0.5263157894736842,
+      "event_recall": 0.4,
+      "detected_events": 10,
+      "false_alerts": 9,
+      "missed_events": 15,
+      "true_events": 25,
+      "normal_points": 28966,
+      "false_alerts_per_1000_normal_points": 0.3107091072291652,
+      "event_fold_count": 22,
+      "event_fold_f1_sum": 8.666666666666668,
+      "event_fold_f1_sq_sum": 7.777777777777779,
+      "event_fold_f1_std": 0.44536177141512334
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAdExchange/exchange-2_cpc_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 6,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 729,
+      "false_alerts_per_1000_normal_points": 8.23045267489712,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 6,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 729,
+      "false_alerts_per_1000_normal_points": 8.23045267489712,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAdExchange/exchange-2_cpm_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.3333333333333333,
+      "event_precision": 0.2,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 4,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 648,
+      "false_alerts_per_1000_normal_points": 6.172839506172839,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.3333333333333333,
+      "event_precision": 0.2,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 4,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 648,
+      "false_alerts_per_1000_normal_points": 6.172839506172839,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAdExchange/exchange-3_cpc_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.3333333333333333,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 2,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 642,
+      "false_alerts_per_1000_normal_points": 3.115264797507788,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5,
+      "event_precision": 0.3333333333333333,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 2,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 642,
+      "false_alerts_per_1000_normal_points": 3.115264797507788,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAdExchange/exchange-3_cpm_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.25,
+      "event_precision": 0.16666666666666666,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 5,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 540,
+      "false_alerts_per_1000_normal_points": 9.25925925925926,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.25,
+      "event_precision": 0.16666666666666666,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 5,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 540,
+      "false_alerts_per_1000_normal_points": 9.25925925925926,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAdExchange/exchange-4_cpc_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.2857142857142857,
+      "event_precision": 0.2,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 4,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 628,
+      "false_alerts_per_1000_normal_points": 6.369426751592357,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.3333333333333333,
+      "event_fold_f1_sq_sum": 0.1111111111111111,
+      "event_fold_f1_std": 0.16666666666666666
+    },
+    "selection_metrics": {
+      "event_f1": 0.2857142857142857,
+      "event_precision": 0.2,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 4,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 628,
+      "false_alerts_per_1000_normal_points": 6.369426751592357,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.3333333333333333,
+      "event_fold_f1_sq_sum": 0.1111111111111111,
+      "event_fold_f1_std": 0.16666666666666666
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAdExchange/exchange-4_cpm_results.csv": {
+    "winner": "recent_mean",
+    "candidate": "16bd0377d6f06bcb",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        1,
+        1
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.2857142857142857,
+      "event_precision": 0.25,
+      "event_recall": 0.3333333333333333,
+      "detected_events": 1,
+      "false_alerts": 3,
+      "missed_events": 2,
+      "true_events": 3,
+      "normal_points": 641,
+      "false_alerts_per_1000_normal_points": 4.6801872074882995,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.3333333333333333,
+      "event_fold_f1_sq_sum": 0.1111111111111111,
+      "event_fold_f1_std": 0.16666666666666666
+    },
+    "selection_metrics": {
+      "event_f1": 0.2857142857142857,
+      "event_precision": 0.25,
+      "event_recall": 0.3333333333333333,
+      "detected_events": 1,
+      "false_alerts": 3,
+      "missed_events": 2,
+      "true_events": 3,
+      "normal_points": 641,
+      "false_alerts_per_1000_normal_points": 4.6801872074882995,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.3333333333333333,
+      "event_fold_f1_sq_sum": 0.1111111111111111,
+      "event_fold_f1_std": 0.16666666666666666
+    },
+    "selection_source": "predeclared_preset_insufficient_events",
+    "local_evidence_weight": 0.0
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv": {
+    "winner": "recent_mean",
+    "candidate": "0abb33f0c799493a",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.45454545454545453,
+      "event_precision": 0.45454545454545453,
+      "event_recall": 0.45454545454545453,
+      "detected_events": 5,
+      "false_alerts": 6,
+      "missed_events": 6,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.44752741105392707,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 4.166666666666667,
+      "event_fold_f1_sq_sum": 3.6944444444444446,
+      "event_fold_f1_std": 0.44289854604079254
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "24a939c0d4b86280",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1614,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.38461538461538464,
+      "event_precision": 0.3333333333333333,
+      "event_recall": 0.45454545454545453,
+      "detected_events": 5,
+      "false_alerts": 10,
+      "missed_events": 6,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.7458790184232118,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 4.0,
+      "event_fold_f1_sq_sum": 3.5,
+      "event_fold_f1_std": 0.43744488188954506
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv": {
+    "winner": "recent_mean",
+    "candidate": "0abb33f0c799493a",
+    "parameters": {
+      "kind": "mean",
+      "family": "recent_mean",
+      "window": 3,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1614,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.45454545454545453,
+      "event_precision": 0.45454545454545453,
+      "event_recall": 0.45454545454545453,
+      "detected_events": 5,
+      "false_alerts": 6,
+      "missed_events": 6,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.44752741105392707,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 4.166666666666667,
+      "event_fold_f1_sq_sum": 3.6944444444444446,
+      "event_fold_f1_std": 0.44289854604079254
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1412,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.46153846153846156,
+      "event_precision": 0.46153846153846156,
+      "event_recall": 0.46153846153846156,
+      "detected_events": 12,
+      "false_alerts": 14,
+      "missed_events": 14,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.3970730047081513,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 10.0,
+      "event_fold_f1_sq_sum": 8.833333333333334,
+      "event_fold_f1_std": 0.44095855184409843
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.3333333333333333,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 2,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1558,
+      "false_alerts_per_1000_normal_points": 1.2836970474967908,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.40816326530612246,
+      "event_precision": 0.43478260869565216,
+      "event_recall": 0.38461538461538464,
+      "detected_events": 10,
+      "false_alerts": 13,
+      "missed_events": 16,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.36871064722899766,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 8.5,
+      "event_fold_f1_sq_sum": 7.583333333333333,
+      "event_fold_f1_std": 0.4365068091616034
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 1,
+      "normal_points": 1762,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.0,
+      "event_fold_f1_sq_sum": 0.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.46153846153846156,
+      "event_precision": 0.46153846153846156,
+      "event_recall": 0.46153846153846156,
+      "detected_events": 12,
+      "false_alerts": 14,
+      "missed_events": 14,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.3970730047081513,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 10.0,
+      "event_fold_f1_sq_sum": 8.833333333333334,
+      "event_fold_f1_std": 0.44095855184409843
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.46153846153846156,
+      "event_precision": 0.46153846153846156,
+      "event_recall": 0.46153846153846156,
+      "detected_events": 12,
+      "false_alerts": 14,
+      "missed_events": 14,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.3970730047081513,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 10.0,
+      "event_fold_f1_sq_sum": 8.833333333333334,
+      "event_fold_f1_std": 0.44095855184409843
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1545,
+      "false_alerts_per_1000_normal_points": 0.6472491909385113,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.3333333333333333
+    },
+    "selection_metrics": {
+      "event_f1": 0.4444444444444444,
+      "event_precision": 0.5714285714285714,
+      "event_recall": 0.36363636363636365,
+      "detected_events": 4,
+      "false_alerts": 3,
+      "missed_events": 7,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.22376370552696354,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 3.6666666666666665,
+      "event_fold_f1_sq_sum": 3.4444444444444446,
+      "event_fold_f1_std": 0.46554833666579765
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1651,
+      "false_alerts_per_1000_normal_points": 0.6056935190793459,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.3333333333333333
+    },
+    "selection_metrics": {
+      "event_f1": 0.37037037037037035,
+      "event_precision": 0.3125,
+      "event_recall": 0.45454545454545453,
+      "detected_events": 5,
+      "false_alerts": 11,
+      "missed_events": 6,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.8204669202655329,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 3.833333333333333,
+      "event_fold_f1_sq_sum": 3.138888888888889,
+      "event_fold_f1_std": 0.4090874450810097
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "96070c6abf0fa118",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.8,
+      "event_precision": 1.0,
+      "event_recall": 0.6666666666666666,
+      "detected_events": 2,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 3,
+      "normal_points": 1410,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 3,
+      "event_fold_f1_sum": 2.0,
+      "event_fold_f1_sq_sum": 2.0,
+      "event_fold_f1_std": 0.4714045207910317
+    },
+    "selection_metrics": {
+      "event_f1": 0.2711864406779661,
+      "event_precision": 0.24242424242424243,
+      "event_recall": 0.3076923076923077,
+      "detected_events": 8,
+      "false_alerts": 25,
+      "missed_events": 18,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.7090589369788417,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 6.333333333333333,
+      "event_fold_f1_sq_sum": 5.388888888888889,
+      "event_fold_f1_std": 0.39357298098068766
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.375
+  },
+  "realAWSCloudwatch/ec2_network_in_257a54.csv": {
+    "winner": "boosted_forecast",
+    "candidate": "cb7012b05303c656",
+    "parameters": {
+      "kind": "boosted",
+      "family": "boosted_forecast",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1587,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.4489795918367347,
+      "event_precision": 0.4782608695652174,
+      "event_recall": 0.4230769230769231,
+      "detected_events": 11,
+      "false_alerts": 12,
+      "missed_events": 15,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.340348289749844,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 7.738095238095238,
+      "event_fold_f1_sq_sum": 6.354308390022677,
+      "event_fold_f1_std": 0.4010084584664678
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/ec2_network_in_5abac7.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 2,
+      "false_alerts": 0,
+      "missed_events": 2,
+      "true_events": 4,
+      "normal_points": 1650,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 3,
+      "event_fold_f1_sum": 1.6666666666666665,
+      "event_fold_f1_sq_sum": 1.4444444444444444,
+      "event_fold_f1_std": 0.4157397096415491
+    },
+    "selection_metrics": {
+      "event_f1": 0.4444444444444444,
+      "event_precision": 0.5714285714285714,
+      "event_recall": 0.36363636363636365,
+      "detected_events": 4,
+      "false_alerts": 3,
+      "missed_events": 7,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.22376370552696354,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 3.6666666666666665,
+      "event_fold_f1_sq_sum": 3.4444444444444446,
+      "event_fold_f1_std": 0.46554833666579765
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realAWSCloudwatch/elb_request_count_8c0756.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1815,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.46153846153846156,
+      "event_precision": 0.46153846153846156,
+      "event_recall": 0.46153846153846156,
+      "detected_events": 12,
+      "false_alerts": 14,
+      "missed_events": 14,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.3970730047081513,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 10.0,
+      "event_fold_f1_sq_sum": 8.833333333333334,
+      "event_fold_f1_std": 0.44095855184409843
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realAWSCloudwatch/grok_asg_anomaly.csv": {
+    "winner": "ridge_single",
+    "candidate": "2c1241de1c6bed47",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1924,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.6153846153846154,
+      "event_precision": 1.0,
+      "event_recall": 0.4444444444444444,
+      "detected_events": 4,
+      "false_alerts": 0,
+      "missed_events": 5,
+      "true_events": 9,
+      "normal_points": 3828,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 8,
+      "event_fold_f1_sum": 3.6666666666666665,
+      "event_fold_f1_sq_sum": 3.4444444444444446,
+      "event_fold_f1_std": 0.4695594862326936
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv": {
+    "winner": "ridge_single",
+    "candidate": "2c1241de1c6bed47",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 558,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.6153846153846154,
+      "event_precision": 1.0,
+      "event_recall": 0.4444444444444444,
+      "detected_events": 4,
+      "false_alerts": 0,
+      "missed_events": 5,
+      "true_events": 9,
+      "normal_points": 3828,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 8,
+      "event_fold_f1_sum": 3.6666666666666665,
+      "event_fold_f1_sq_sum": 3.4444444444444446,
+      "event_fold_f1_std": 0.4695594862326936
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1614,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.4444444444444444,
+      "event_precision": 0.5714285714285714,
+      "event_recall": 0.36363636363636365,
+      "detected_events": 4,
+      "false_alerts": 3,
+      "missed_events": 7,
+      "true_events": 11,
+      "normal_points": 13407,
+      "false_alerts_per_1000_normal_points": 0.22376370552696354,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 3.6666666666666665,
+      "event_fold_f1_sq_sum": 3.4444444444444446,
+      "event_fold_f1_std": 0.46554833666579765
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1614,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.46153846153846156,
+      "event_precision": 0.46153846153846156,
+      "event_recall": 0.46153846153846156,
+      "detected_events": 12,
+      "false_alerts": 14,
+      "missed_events": 14,
+      "true_events": 26,
+      "normal_points": 35258,
+      "false_alerts_per_1000_normal_points": 0.3970730047081513,
+      "event_fold_count": 24,
+      "event_fold_f1_sum": 10.0,
+      "event_fold_f1_sq_sum": 8.833333333333334,
+      "event_fold_f1_std": 0.44095855184409843
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realKnownCause/ambient_temperature_system_failure.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 2,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 2,
+      "normal_points": 2730,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 2.0,
+      "event_fold_f1_sq_sum": 2.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.4827586206896552,
+      "event_precision": 0.5384615384615384,
+      "event_recall": 0.4375,
+      "detected_events": 14,
+      "false_alerts": 12,
+      "missed_events": 18,
+      "true_events": 32,
+      "normal_points": 35360,
+      "false_alerts_per_1000_normal_points": 0.3393665158371041,
+      "event_fold_count": 30,
+      "event_fold_f1_sum": 11.666666666666666,
+      "event_fold_f1_sq_sum": 10.277777777777779,
+      "event_fold_f1_std": 0.43744488188954506
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realKnownCause/cpu_utilization_asg_misconfiguration.csv": {
+    "winner": "ridge_single",
+    "candidate": "e9b4c92d70d05106",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 1,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 8121,
+      "false_alerts_per_1000_normal_points": 0.12313754463735993,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.48717948717948717,
+      "event_precision": 0.5,
+      "event_recall": 0.475,
+      "detected_events": 19,
+      "false_alerts": 19,
+      "missed_events": 21,
+      "true_events": 40,
+      "normal_points": 48333,
+      "false_alerts_per_1000_normal_points": 0.3931061593528231,
+      "event_fold_count": 38,
+      "event_fold_f1_sum": 14.9,
+      "event_fold_f1_sq_sum": 12.576666666666666,
+      "event_fold_f1_std": 0.4209731284590263
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realKnownCause/ec2_request_latency_system_failure.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 2,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 2,
+      "normal_points": 1574,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 2.0,
+      "event_fold_f1_sq_sum": 2.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.5128205128205128,
+      "event_precision": 0.5555555555555556,
+      "event_recall": 0.47619047619047616,
+      "detected_events": 10,
+      "false_alerts": 8,
+      "missed_events": 11,
+      "true_events": 21,
+      "normal_points": 17813,
+      "false_alerts_per_1000_normal_points": 0.44911020041542693,
+      "event_fold_count": 19,
+      "event_fold_f1_sum": 8.5,
+      "event_fold_f1_sq_sum": 7.583333333333334,
+      "event_fold_f1_std": 0.44607656614354807
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realKnownCause/machine_temperature_system_failure.csv": {
+    "winner": "ridge_single",
+    "candidate": "2c1241de1c6bed47",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 5,
+      "missed_events": 2,
+      "true_events": 2,
+      "normal_points": 9579,
+      "false_alerts_per_1000_normal_points": 0.5219751539826705,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.0,
+      "event_fold_f1_sq_sum": 0.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 5,
+      "false_alerts": 0,
+      "missed_events": 5,
+      "true_events": 10,
+      "normal_points": 6310,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 9,
+      "event_fold_f1_sum": 4.666666666666666,
+      "event_fold_f1_sq_sum": 4.444444444444445,
+      "event_fold_f1_std": 0.47430549906909997
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realKnownCause/nyc_taxi.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 0.75,
+      "event_recall": 0.6,
+      "detected_events": 3,
+      "false_alerts": 1,
+      "missed_events": 2,
+      "true_events": 5,
+      "normal_points": 3985,
+      "false_alerts_per_1000_normal_points": 0.25094102885821834,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.5,
+      "event_fold_f1_sq_sum": 1.25,
+      "event_fold_f1_std": 0.25
+    },
+    "selection_metrics": {
+      "event_f1": 0.4533333333333333,
+      "event_precision": 0.4857142857142857,
+      "event_recall": 0.425,
+      "detected_events": 17,
+      "false_alerts": 18,
+      "missed_events": 23,
+      "true_events": 40,
+      "normal_points": 48333,
+      "false_alerts_per_1000_normal_points": 0.37241636149214824,
+      "event_fold_count": 38,
+      "event_fold_f1_sum": 14.233333333333333,
+      "event_fold_f1_sq_sum": 12.632222222222222,
+      "event_fold_f1_std": 0.43832711025709353
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.4444444444444444
+  },
+  "realKnownCause/rogue_agent_key_hold.csv": {
+    "winner": "ridge_multi",
+    "candidate": "8ca09eb15042954e",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 1.0,
+      "event_recall": 0.3333333333333333,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 2,
+      "true_events": 3,
+      "normal_points": 740,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 3,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.4714045207910317
+    },
+    "selection_metrics": {
+      "event_f1": 0.4788732394366197,
+      "event_precision": 0.5483870967741935,
+      "event_recall": 0.425,
+      "detected_events": 17,
+      "false_alerts": 14,
+      "missed_events": 23,
+      "true_events": 40,
+      "normal_points": 48333,
+      "false_alerts_per_1000_normal_points": 0.28965717004944863,
+      "event_fold_count": 38,
+      "event_fold_f1_sum": 14.285714285714286,
+      "event_fold_f1_sq_sum": 12.748299319727892,
+      "event_fold_f1_std": 0.44062545377010376
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realKnownCause/rogue_agent_key_updown.csv": {
+    "winner": "ridge_single",
+    "candidate": "e9b4c92d70d05106",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 3,
+      "true_events": 3,
+      "normal_points": 1861,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.0,
+      "event_fold_f1_sq_sum": 0.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.48717948717948717,
+      "event_precision": 0.5,
+      "event_recall": 0.475,
+      "detected_events": 19,
+      "false_alerts": 19,
+      "missed_events": 21,
+      "true_events": 40,
+      "normal_points": 48333,
+      "false_alerts_per_1000_normal_points": 0.3931061593528231,
+      "event_fold_count": 38,
+      "event_fold_f1_sum": 14.9,
+      "event_fold_f1_sq_sum": 12.576666666666666,
+      "event_fold_f1_std": 0.4209731284590263
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realTraffic/occupancy_6005.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 832,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.42038216560509556,
+      "event_precision": 0.39759036144578314,
+      "event_recall": 0.44594594594594594,
+      "detected_events": 33,
+      "false_alerts": 50,
+      "missed_events": 41,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.3528979983625533,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 24.819047619047616,
+      "event_fold_f1_sq_sum": 20.617188208616778,
+      "event_fold_f1_std": 0.4139954288526583
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTraffic/occupancy_t4013.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "7d497557a079099f",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1087,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.30973451327433627,
+      "event_precision": 0.23026315789473684,
+      "event_recall": 0.47297297297297297,
+      "detected_events": 35,
+      "false_alerts": 117,
+      "missed_events": 39,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.8257813161683747,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 22.875468975468973,
+      "event_fold_f1_sq_sum": 17.89674895731173,
+      "event_fold_f1_std": 0.38920389125125265
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTraffic/speed_6005.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 1125,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.42038216560509556,
+      "event_precision": 0.39759036144578314,
+      "event_recall": 0.44594594594594594,
+      "detected_events": 33,
+      "false_alerts": 50,
+      "missed_events": 41,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.3528979983625533,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 24.819047619047616,
+      "event_fold_f1_sq_sum": 20.617188208616778,
+      "event_fold_f1_std": 0.4139954288526583
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realTraffic/speed_7578.csv": {
+    "winner": "boosted_forecast",
+    "candidate": "cb7012b05303c656",
+    "parameters": {
+      "kind": "boosted",
+      "family": "boosted_forecast",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 0.6666666666666666,
+      "event_recall": 0.6666666666666666,
+      "detected_events": 2,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 3,
+      "normal_points": 437,
+      "false_alerts_per_1000_normal_points": 2.288329519450801,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.3333333333333333,
+      "event_fold_f1_sq_sum": 0.8888888888888888,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.36879432624113473,
+      "event_precision": 0.3880597014925373,
+      "event_recall": 0.35135135135135137,
+      "detected_events": 26,
+      "false_alerts": 41,
+      "missed_events": 48,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.2893763586572937,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 19.45714285714286,
+      "event_fold_f1_sq_sum": 16.77482993197279,
+      "event_fold_f1_std": 0.41045033354991267
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.375
+  },
+  "realTraffic/speed_t4013.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 1086,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.42038216560509556,
+      "event_precision": 0.39759036144578314,
+      "event_recall": 0.44594594594594594,
+      "detected_events": 33,
+      "false_alerts": 50,
+      "missed_events": 41,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.3528979983625533,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 24.819047619047616,
+      "event_fold_f1_sq_sum": 20.617188208616778,
+      "event_fold_f1_std": 0.4139954288526583
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTraffic/TravelTime_387.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "0c9e5541a05ae3da",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 1011,
+      "false_alerts_per_1000_normal_points": 0.9891196834817013,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.36607142857142855,
+      "event_precision": 0.2733333333333333,
+      "event_recall": 0.5540540540540541,
+      "detected_events": 41,
+      "false_alerts": 109,
+      "missed_events": 33,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.7693176364303662,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 27.533333333333335,
+      "event_fold_f1_sq_sum": 21.911111111111108,
+      "event_fold_f1_std": 0.397071462358594
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realTraffic/TravelTime_451.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 0,
+      "normal_points": 972,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 0,
+      "event_fold_f1_sum": 0,
+      "event_fold_f1_sq_sum": 0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.4305555555555556,
+      "event_precision": 0.44285714285714284,
+      "event_recall": 0.4189189189189189,
+      "detected_events": 31,
+      "false_alerts": 39,
+      "missed_events": 43,
+      "true_events": 74,
+      "normal_points": 141684,
+      "false_alerts_per_1000_normal_points": 0.27526043872279155,
+      "event_fold_count": 65,
+      "event_fold_f1_sum": 24.233333333333334,
+      "event_fold_f1_sq_sum": 21.687777777777775,
+      "event_fold_f1_std": 0.4412062838155974
+    },
+    "selection_source": "other_source_groups_development_only",
+    "local_evidence_weight": 0.0
+  },
+  "realTweets/Twitter_volume_AAPL.csv": {
+    "winner": "ridge_single",
+    "candidate": "e9b4c92d70d05106",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 0.5,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 6758,
+      "false_alerts_per_1000_normal_points": 0.1479727730097662,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.4,
+      "event_precision": 0.41509433962264153,
+      "event_recall": 0.38596491228070173,
+      "detected_events": 22,
+      "false_alerts": 31,
+      "missed_events": 35,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.403000403000403,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 16.9,
+      "event_fold_f1_sq_sum": 14.076666666666666,
+      "event_fold_f1_std": 0.40901018732219047
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTweets/Twitter_volume_AMZN.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "7d497557a079099f",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 6335,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.3020833333333333,
+      "event_precision": 0.21481481481481482,
+      "event_recall": 0.5087719298245614,
+      "detected_events": 29,
+      "false_alerts": 106,
+      "missed_events": 28,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 1.378001378001378,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 17.808802308802306,
+      "event_fold_f1_sq_sum": 13.292304512867284,
+      "event_fold_f1_std": 0.3728065374798901
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realTweets/Twitter_volume_CRM.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.0,
+      "event_precision": 0.0,
+      "event_recall": 0.0,
+      "detected_events": 0,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 1,
+      "normal_points": 6624,
+      "false_alerts_per_1000_normal_points": 0.15096618357487923,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 0.0,
+      "event_fold_f1_sq_sum": 0.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.44660194174757284,
+      "event_precision": 0.5,
+      "event_recall": 0.40350877192982454,
+      "detected_events": 23,
+      "false_alerts": 23,
+      "missed_events": 34,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.299000299000299,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.28571428571429,
+      "event_fold_f1_sq_sum": 17.24829931972789,
+      "event_fold_f1_std": 0.4429339411136565
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTweets/Twitter_volume_CVS.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 1.0,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 6611,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.42857142857142855,
+      "event_precision": 0.43636363636363634,
+      "event_recall": 0.42105263157894735,
+      "detected_events": 24,
+      "false_alerts": 31,
+      "missed_events": 33,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.403000403000403,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.400000000000002,
+      "event_fold_f1_sq_sum": 17.326666666666664,
+      "event_fold_f1_std": 0.4427068254876282
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realTweets/Twitter_volume_FB.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 6334,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.42857142857142855,
+      "event_precision": 0.43636363636363634,
+      "event_recall": 0.42105263157894735,
+      "detected_events": 24,
+      "false_alerts": 31,
+      "missed_events": 33,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.403000403000403,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.400000000000002,
+      "event_fold_f1_sq_sum": 17.326666666666664,
+      "event_fold_f1_std": 0.4427068254876282
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTweets/Twitter_volume_GOOG.csv": {
+    "winner": "ridge_multi",
+    "candidate": "dc3fde4530884a4a",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 24,
+      "horizons": [
+        1,
+        16,
+        64
+      ],
+      "alpha": 10.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.5,
+      "event_precision": 0.5,
+      "event_recall": 0.5,
+      "detected_events": 1,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 2,
+      "normal_points": 6334,
+      "false_alerts_per_1000_normal_points": 0.15787811809283234,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 0.6666666666666666,
+      "event_fold_f1_sq_sum": 0.4444444444444444,
+      "event_fold_f1_std": 0.3333333333333333
+    },
+    "selection_metrics": {
+      "event_f1": 0.44660194174757284,
+      "event_precision": 0.5,
+      "event_recall": 0.40350877192982454,
+      "detected_events": 23,
+      "false_alerts": 23,
+      "missed_events": 34,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.299000299000299,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.28571428571429,
+      "event_fold_f1_sq_sum": 17.24829931972789,
+      "event_fold_f1_std": 0.4429339411136565
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  },
+  "realTweets/Twitter_volume_IBM.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "8a736f9f6250d3f0",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 6357,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.42857142857142855,
+      "event_precision": 0.43636363636363634,
+      "event_recall": 0.42105263157894735,
+      "detected_events": 24,
+      "false_alerts": 31,
+      "missed_events": 33,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.403000403000403,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.400000000000002,
+      "event_fold_f1_sq_sum": 17.326666666666664,
+      "event_fold_f1_std": 0.4427068254876282
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTweets/Twitter_volume_KO.csv": {
+    "winner": "ridge_single",
+    "candidate": "9550d3926ed52558",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_single",
+      "window": 24,
+      "horizons": [
+        1
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.8,
+      "event_precision": 1.0,
+      "event_recall": 0.6666666666666666,
+      "detected_events": 2,
+      "false_alerts": 0,
+      "missed_events": 1,
+      "true_events": 3,
+      "normal_points": 6162,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.5
+    },
+    "selection_metrics": {
+      "event_f1": 0.3695652173913043,
+      "event_precision": 0.4857142857142857,
+      "event_recall": 0.2982456140350877,
+      "detected_events": 17,
+      "false_alerts": 18,
+      "missed_events": 40,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.234000234000234,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 13.666666666666666,
+      "event_fold_f1_sq_sum": 11.666666666666666,
+      "event_fold_f1_std": 0.3982740541665026
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.375
+  },
+  "realTweets/Twitter_volume_PFE.csv": {
+    "winner": "pattern_hybrid",
+    "candidate": "0c9e5541a05ae3da",
+    "parameters": {
+      "kind": "pattern",
+      "family": "pattern_hybrid",
+      "window": 96,
+      "horizons": [
+        1
+      ],
+      "alpha": 0.0,
+      "use_seasonality": false,
+      "adaptive": false,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "empirical",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 1.0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "detected_events": 1,
+      "false_alerts": 0,
+      "missed_events": 0,
+      "true_events": 1,
+      "normal_points": 6740,
+      "false_alerts_per_1000_normal_points": 0.0,
+      "event_fold_count": 1,
+      "event_fold_f1_sum": 1.0,
+      "event_fold_f1_sq_sum": 1.0,
+      "event_fold_f1_std": 0.0
+    },
+    "selection_metrics": {
+      "event_f1": 0.35359116022099446,
+      "event_precision": 0.25806451612903225,
+      "event_recall": 0.5614035087719298,
+      "detected_events": 32,
+      "false_alerts": 92,
+      "missed_events": 25,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 1.196001196001196,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 21.5,
+      "event_fold_f1_sq_sum": 16.97222222222222,
+      "event_fold_f1_std": 0.39312141183665444
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.16666666666666666
+  },
+  "realTweets/Twitter_volume_UPS.csv": {
+    "winner": "ridge_multi",
+    "candidate": "fcdb57631f37c4c9",
+    "parameters": {
+      "kind": "ridge",
+      "family": "ridge_multi",
+      "window": 96,
+      "horizons": [
+        1,
+        8,
+        24
+      ],
+      "alpha": 1.0,
+      "use_seasonality": true,
+      "adaptive": true,
+      "quantile": 0.999,
+      "persistence": [
+        2,
+        3
+      ],
+      "method": "mad",
+      "incident_profile": "guarded"
+    },
+    "validation": {
+      "event_f1": 0.6666666666666666,
+      "event_precision": 0.6666666666666666,
+      "event_recall": 0.6666666666666666,
+      "detected_events": 2,
+      "false_alerts": 1,
+      "missed_events": 1,
+      "true_events": 3,
+      "normal_points": 6506,
+      "false_alerts_per_1000_normal_points": 0.1537042729787888,
+      "event_fold_count": 2,
+      "event_fold_f1_sum": 1.5,
+      "event_fold_f1_sq_sum": 1.25,
+      "event_fold_f1_std": 0.25
+    },
+    "selection_metrics": {
+      "event_f1": 0.423728813559322,
+      "event_precision": 0.4098360655737705,
+      "event_recall": 0.43859649122807015,
+      "detected_events": 25,
+      "false_alerts": 36,
+      "missed_events": 32,
+      "true_events": 57,
+      "normal_points": 76923,
+      "false_alerts_per_1000_normal_points": 0.468000468000468,
+      "event_fold_count": 50,
+      "event_fold_f1_sum": 19.366666666666664,
+      "event_fold_f1_sq_sum": 16.34111111111111,
+      "event_fold_f1_std": 0.42047010727412143
+    },
+    "selection_source": "shrunk_own_cv_with_historical_peer_prior",
+    "local_evidence_weight": 0.2857142857142857
+  }
+}

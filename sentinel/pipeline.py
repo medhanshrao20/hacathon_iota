@@ -13,6 +13,7 @@ import traceback
 import joblib
 import numpy as np
 import pandas as pd
+from threadpoolctl import threadpool_limits
 
 from .data import download_nab, event_ids, load_series
 from .evaluation import evaluate
@@ -70,6 +71,10 @@ def validate_config(config):
         raise ValueError("Invalid incident recovery settings")
     if not 0 < config["adaptive_min_scale_fraction"] <= 1:
         raise ValueError("Invalid adaptive scale floor")
+    if set(config.get("extra_models", [])) - {"boosted", "pattern"}:
+        raise ValueError("extra_models supports boosted and pattern")
+    if config.get("pattern_reference_size", 512) < 16 or config.get("boosting_iterations", 100) < 1:
+        raise ValueError("Invalid new model sizes")
 
 
 def find_data(config, pattern=None, limit=None):
@@ -103,19 +108,19 @@ def evaluate_selected(stream, selected, winner, windows, config):
     train_end, cal_end, test_start = stream["folds"][final_fold]
     for family, item in selected.items():
         params = item["parameters"]
-        model, development_predictions, calibration, local, _ = fit_fold(stream, from_parameters(params), final_fold, config)
+        model, development_predictions, calibration, local, _, auxiliary = fit_fold(stream, from_parameters(params), final_fold, config)
         floor = stream["references"][final_fold]["floor"]
         detector = calibrate(calibration, local, floor, params, config)
         validation_replay = detector.replay(stream["values"], development_predictions,
-                                             stream["observed"], cal_end, test_start, local)
+                                             stream["observed"], cal_end, test_start, local, auxiliary)
         # Full observations and test label IDs enter only AFTER selection/fit.
         stamps, values, observed, audit = load_series(stream["path"], config["max_missing_fraction"])
         if audit["sha256"] != stream["audit"]["sha256"]:
             raise RuntimeError("Input changed between development and test; refusing mixed results")
         begin = time.perf_counter()
         predictions = model.predict_aligned(values)
-        _, local = prepare_errors(values, predictions, observed, model, floor)
-        replay = detector.replay(values, predictions, observed, test_start, len(values), local)
+        _, local, auxiliary = prepare_errors(values, predictions, observed, model, floor)
+        replay = detector.replay(values, predictions, observed, test_start, len(values), local, auxiliary)
         seconds = time.perf_counter() - begin
         ids = event_ids(stamps, windows)
         metrics = evaluate(stamps.iloc[test_start:].reset_index(drop=True), ids[test_start:],
@@ -141,7 +146,7 @@ def evaluate_selected(stream, selected, winner, windows, config):
             chart(frame, output / "chart.html", f"{stream['relative']}: exploratory public test replay",
                   ids[test_start:], config["plot_max_points"])
             keep = model.history_length + max(model.horizons) + 1
-            joblib.dump({"format_version": 2, "model": model, "detector": detector, "raw_floor": floor,
+            joblib.dump({"format_version": 3, "model": model, "detector": detector, "raw_floor": floor,
                          "history_values": values[-keep:], "history_observed": observed[-keep:],
                          "history_timestamps": stamps.iloc[-keep:].astype(str).tolist(),
                          "parameters": params, "series": stream["relative"],
@@ -163,7 +168,7 @@ def predict_file(args, config):
     if not args.artifact:
         raise ValueError("--predict requires a trusted --artifact model.joblib")
     bundle = joblib.load(project_path(args.artifact))
-    if bundle.get("format_version") != 2:
+    if bundle.get("format_version") != 3:
         raise ValueError("Older model format: rerun training with the current implementation")
     stamps, values, observed, audit = load_series(project_path(args.predict), config["max_missing_fraction"])
     old_stamps = pd.to_datetime(bundle["history_timestamps"], utc=True)
@@ -174,8 +179,8 @@ def predict_file(args, config):
     offset = len(bundle["history_values"])
     model, detector = bundle["model"], bundle["detector"]
     predictions = model.predict_aligned(joined)
-    _, local = prepare_errors(joined, predictions, joined_observed, model, bundle["raw_floor"])
-    replay = detector.replay(joined, predictions, joined_observed, offset, len(joined), local)
+    _, local, auxiliary = prepare_errors(joined, predictions, joined_observed, model, bundle["raw_floor"])
+    replay = detector.replay(joined, predictions, joined_observed, offset, len(joined), local, auxiliary)
     all_stamps = pd.Series(old_stamps.tolist() + stamps.tolist())
     frame = prediction_frame(all_stamps, joined, joined_observed, predictions, replay, model, detector.threshold, offset)
     output = new_output(config, "predict")
@@ -196,19 +201,22 @@ def new_output(config, prefix):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Sentinel v2: chronological CV, pooled fallback, causal incidents")
+    parser = argparse.ArgumentParser(description="Sentinel v3: nonlinear forecasts, pattern novelty, causal CV")
     parser.add_argument("--config", default="config.json")
     parser.add_argument("--check-data", action="store_true", help="Validate data and fold boundaries; no fitting")
     parser.add_argument("--download-data", action="store_true", help="Pinned data download only")
     parser.add_argument("--only", help="Relative CSV glob")
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--selection-audit", help="Audit saved development folds only; no training or test replay")
     parser.add_argument("--predict", help="Unlabeled continuation CSV")
-    parser.add_argument("--artifact", help="Trusted v2 model.joblib")
+    parser.add_argument("--artifact", help="Trusted v3 model.joblib")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be positive")
     config = json.loads(project_path(args.config).read_text(encoding="utf-8"))
     validate_config(config)
+    # Bound BLAS/OpenMP parallelism; avoid oversubscribing small per-stream fits.
+    thread_controller = threadpool_limits(limits=config.get("cpu_threads", 4))
     np.random.seed(config["seed"])
     if args.download_data:
         print(f"Downloaded {len(download_nab(project_path('data/nab'))['files'])} files; no training")
@@ -230,7 +238,17 @@ def main():
             print(f"OK {relative}: {len(values)} cleaned rows; folds {folds}; test starts {test_start}")
         print("Data checked; no fitting")
         return
-    output = new_output(config, "experiment_v2")
+    if args.selection_audit:
+        from .selection_policy import audit_saved_development
+        streams = [prepare_development(path, path.relative_to(root).as_posix(),
+                    labels[path.relative_to(root).as_posix()], config,
+                    splits[path.relative_to(root).as_posix()] if splits else None) for path in paths]
+        audit = audit_saved_development(project_path(args.selection_audit), streams, config)
+        directory = new_output(config, "selection_audit")
+        write_json(directory / "selection_policy_development.json", audit)
+        print(f"Development-only selection audit: {audit['chosen_policy']}; {directory}")
+        return
+    output = new_output(config, "experiment_v3")
     write_json(output / "config_used.json", config)
     write_json(output / "environment.json", {"python": platform.python_version(),
                "packages": {name: importlib.metadata.version(name) for name in

@@ -1,4 +1,4 @@
-# Sentinel v2 methodology
+# Sentinel v3 methodology
 
 ## Objective and provenance
 
@@ -41,7 +41,7 @@ training prefix. No refit on all development data is silently performed.
 ## 3. Optional supervised training cleanup
 
 When use_training_labels=true, form the normal mask ONLY from that fold's
-training label IDs. Exclude Ridge windows if any point in their complete
+training label IDs. Exclude Ridge/boosting windows if any point in their complete
 input-to-last-target interval is missing or known anomalous. Prefix sums make
 this check exact and efficient. Exclude those training anomalies from period
 discovery and noise estimation too. Filtering cannot access calibration,
@@ -72,6 +72,24 @@ origin t, all inputs end at t and every target t+h must be inside training.
 At current time T score predictions made at T-h. Batch implementation preserves
 this alignment and is checked by causal perturbation tests. Regression alpha
 is 1/10/100; windows are 24/96. Ridge is a candidate, not presumed best.
+
+Histogram gradient boosting: predict the next reading from the same past-only
+lags plus window mean, standard deviation, median, slope, mean absolute change,
+flat-change fraction and recent level contrast. Fit absolute-error loss for
+100 fixed iterations, learning rate .05, at most 7 leaves, L2=10 and minimum
+leaf size max(20, 1% of accepted training windows). Disable random early stopping;
+there is no hidden shuffled validation split. These conservative parameters are
+declared defaults, not a claim of globally optimal values.
+
+Pattern hybrid: keep at most 512 evenly spaced clean training windows. Build
+two nearest-neighbor indices: eight-bin PAA of per-window z-normalized values,
+and seven window-state features scaled by a training-only RobustScaler. At T,
+query the window ending at T, after observing T, for shape and state distances.
+This is anomaly evidence, not a forecast. The companion numerical forecast is
+Last-3 using only values before T. Distances are separate score channels: only
+distance ABOVE its calibration median contributes, so a more familiar window
+cannot trigger a novelty alarm. Distance scale floors are .001. No labels or
+future windows enter the reference index. The index is capped for CPU/RAM use.
 
 ## 5. Error calibration and expected ranges
 
@@ -134,6 +152,11 @@ from OTHER source groups and only peers whose last development timestamp is
 no later than the target's last pre-test timestamp. Both artificial categories
 share a source group. Users must group other related streams appropriately.
 No target/source-related stream or future peer-label period enters the pool.
+With a valid peer pool and fewer local events, blend the peer ranking objective
+with the local objective using weight min(.5, local_events/(local_events+5)).
+Subtract a further .05 times the excess local false-alert rate above the budget;
+even event-free local folds provide evidence against noisy transferred settings.
+Record the local evidence weight and source. This does not use test alarms.
 The pool uses only candidates complete on all peer folds. It never reads old
 test metrics, prior result folders or test-selected parameters.
 
@@ -158,9 +181,9 @@ Align both matching and prediction schema when organizer specifications arrive.
 
 Reports distinguish current raw exceedance from incident state and suppressed
 reopening. Save numerical forecasts, ranges and evidence. Save only the winning
-v2 bundle, including coefficients, detector state and sufficient lag history for
+v3 bundle, including fitted model, detector state and sufficient lag history for
 same-stream continuation. New-data inference requires later timestamps, no labels
-and no refit. Old v1 bundles are rejected. Throughput is batch processing speed,
+and no refit. Older bundles are rejected. Throughput is batch processing speed,
 not a certified real-time per-window latency benchmark.
 
 ## 9. What the safeguards establish
@@ -169,12 +192,28 @@ Synthetic tests verify train-boundary target isolation, train-only scaling and
 period discovery, full-span anomaly filtering, unchanged CV/selection after
 test-value/label perturbations, target-group and future-peer exclusion, chunked
 incident replay equivalence, CLI selection freezing, and saved inference.
-Read-only data/fold checks cover all 58 series. They do not establish a test F1
-improvement without the user's next run.
+Read-only data/fold checks cover all 58 series. Added tests check both new model
+families, one-sided novelty evidence and vectorized replay against an independent
+scalar reference. The 23 passing tests establish implementation checks; only a
+completed real-data run can establish a measured F1 comparison.
 
 No implementation can guarantee zero overfitting. The public test has already
-been inspected and influenced the design of v2, so rerun results are exploratory.
+been inspected and influenced the design, so rerun results are exploratory.
 The code prevents direct test use during fitting/calibration/selection; an
 independent generalization claim requires genuinely untouched data such as the
 organizer's hidden test. More tuning on the same public replay does not create
 fresh evidence. Existing v1 results stay available as the comparison baseline.
+
+## 10. Read-only selection-policy audit
+
+The optional --selection-audit command validates saved configuration, data hashes,
+fold boundaries and scoring-source hashes, then reads only development logs.
+For each stream, choose a candidate using fold 0 and evaluate on fold 1;
+then choose using folds 0/1 and evaluate on fold 2. Borrow peer summaries only
+when their validation end predates the target's current selection boundary,
+and exclude the whole target source group. Candidate tie order follows the
+original experiment log. Compare six declared transfer/local-evidence policies
+and seven fixed-family policies. Rank their pooled next-fold metrics using the
+same F1/dispersion/false-alert objective. This audit does not alter normal runs,
+fit new models or load test predictions. It is development evidence, not an
+independent generalization claim.

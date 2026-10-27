@@ -73,8 +73,11 @@ def prepare_errors(values, predictions, observed, model, floor):
     errors = values[:, None] - predictions
     if local is not None:
         errors = errors / local
+    auxiliary = model.auxiliary_scores(values)
+    if auxiliary is not None:
+        errors = np.column_stack([errors, auxiliary])
     errors[~observed] = np.nan
-    return errors, local
+    return errors, local, auxiliary
 
 
 def fit_fold(stream, spec, fold_number, config):
@@ -85,7 +88,7 @@ def fit_fold(stream, spec, fold_number, config):
     model = copy.deepcopy(spec).fit(values[:train_end], observed[:train_end], train_end, normal,
                                    {**config, "_training_period": reference["period"]})
     predictions = model.predict_aligned(values)
-    errors, local = prepare_errors(values, predictions, observed, model, reference["floor"])
+    errors, local, auxiliary = prepare_errors(values, predictions, observed, model, reference["floor"])
     calibration = errors[train_end:cal_end]
     calibration = calibration[np.isfinite(calibration).all(axis=1)]
     if len(calibration) < config["min_calibration_rows"]:
@@ -94,13 +97,17 @@ def fit_fold(stream, spec, fold_number, config):
     if not eligible.any():
         raise ValueError("No eligible validation targets")
     mae = float(np.mean(np.abs(values[cal_end:val_end][eligible] - predictions[cal_end:val_end, 0][eligible])))
-    return model, predictions, calibration, local, mae
+    return model, predictions, calibration, local, mae, auxiliary
 
 
 def calibrate(calibration, local, floor, params, config):
+    forecast_width = len(params["horizons"])
+    extra_width = calibration.shape[1] - forecast_width
+    floors = np.r_[np.full(forecast_width, 1e-3 if local is not None else floor), np.full(extra_width, 1e-3)]
+    upper_only = np.r_[np.zeros(forecast_width, bool), np.ones(extra_width, bool)]
     return Detector.calibrate(calibration, params["quantile"], params["adaptive"], config,
-                              1e-3 if local is not None else floor, params["persistence"],
-                              params["method"], params["incident_profile"])
+                              floors, params["persistence"],
+                              params["method"], params["incident_profile"], upper_only)
 
 
 def aggregate(rows):
@@ -131,7 +138,7 @@ def aggregate(rows):
 def rank(summary, params, config):
     excess = max(0, summary["false_alerts_per_1000_normal_points"] - config["false_alert_budget_per_1000"])
     objective = summary["event_f1"] - .1*summary["event_fold_f1_std"] - .05*excess
-    complexity = params["window"]*len(params["horizons"]) if params["kind"] == "ridge" else params["window"]
+    complexity = params["window"]*len(params["horizons"]) if params["kind"] in ("ridge", "boosted") else params["window"]
     return (objective, -summary["false_alerts_per_1000_normal_points"], summary["event_recall"],
             -complexity, params["alpha"])
 
@@ -144,7 +151,7 @@ def develop_series(stream, config, output):
         base = model_parameters(spec)
         for fold_number, (_, cal_end, val_end) in enumerate(stream["folds"]):
             try:
-                model, predictions, calibration, local, mae = fit_fold(stream, spec, fold_number, config)
+                model, predictions, calibration, local, mae, auxiliary = fit_fold(stream, spec, fold_number, config)
                 options = product(config["adaptation"], config["threshold_quantiles"], config["persistence"],
                                   config["threshold_methods"], config["incident_profiles"])
                 for adaptive, quantile, persistence, method, incident in options:
@@ -153,7 +160,7 @@ def develop_series(stream, config, output):
                     token = hashlib.sha256(json.dumps(params, sort_keys=True).encode()).hexdigest()[:16]
                     params_by_id[token] = params
                     detector = calibrate(calibration, local, stream["references"][fold_number]["floor"], params, config)
-                    result = detector.replay(stream["values"], predictions, stream["observed"], cal_end, val_end, local)
+                    result = detector.replay(stream["values"], predictions, stream["observed"], cal_end, val_end, local, auxiliary)
                     metrics = evaluate(stream["stamps"].iloc[cal_end:val_end].reset_index(drop=True),
                                        stream["ids"][cal_end:val_end], result["flag"], np.isfinite(result["score"]))
                     trials.append({"candidate": token, "fold": fold_number, **params, **metrics,
@@ -209,19 +216,34 @@ def select_methods(stream, pools, config):
     for key, item in stream["summaries"].items():
         params = item["parameters"]
         pooled = pools.get(stream["relative"], {}).get(key)
+        local_weight = 1.0 if own_information else 0.0
         if own_information:
             metrics, source = item["validation"], "own_chronological_folds"
         elif pooled and pooled["true_events"] >= config["min_selection_events"] and pooled["event_fold_count"] >= config["min_event_folds"]:
             metrics, source = pooled, "other_source_groups_development_only"
+            local_weight = min(.5, stream["selection_events"] /
+                               (stream["selection_events"] + config.get("selection_prior_events", 5.)))
+            if local_weight:
+                source = "shrunk_own_cv_with_historical_peer_prior"
         else:
             metrics, source = item["validation"], "predeclared_preset_insufficient_events"
         key_rank = rank(metrics, params, config) if source != "predeclared_preset_insufficient_events" else preset_rank(params)
+        if source in ("other_source_groups_development_only", "shrunk_own_cv_with_historical_peer_prior"):
+            own = item["validation"]
+            local_rate = own.get("false_alerts_per_1000_normal_points", 1000*own["false_alerts"]/max(1, own["normal_points"]))
+            objective = key_rank[0]
+            if local_weight:
+                objective = (1-local_weight)*objective + local_weight*rank(own, params, config)[0]
+            objective -= config.get("local_false_alert_penalty", .05)*max(
+                0, local_rate-config["false_alert_budget_per_1000"])
+            key_rank = (objective, -local_rate, *key_rank[2:])
         family = params["family"]
         # Prefer evidence-based candidates if a pooled candidate is unavailable.
         comparison = (source != "predeclared_preset_insufficient_events", key_rank)
         if family not in selected or comparison > selected[family]["rank"]:
             selected[family] = {"candidate": key, "parameters": params, "validation": item["validation"],
                                 "selection_metrics": metrics, "selection_source": source, "rank": comparison}
+            selected[family]["local_evidence_weight"] = local_weight
     evidence = {family: item for family, item in selected.items()
                 if item["selection_source"] != "predeclared_preset_insufficient_events"}
     winner = max(evidence, key=lambda family: evidence[family]["rank"]) if evidence else "recent_mean"

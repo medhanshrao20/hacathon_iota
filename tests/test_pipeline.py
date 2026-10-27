@@ -40,12 +40,16 @@ class SyntheticPipeline(unittest.TestCase):
             result = subprocess.run([sys.executable, str(ROOT/"run.py"), "--config", str(config_file)],
                                     capture_output=True, text=True, timeout=120)
             self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
-            output = next((root/"results").glob("experiment_v2_*"))
+            output = next((root/"results").glob("experiment_v3_*"))
             frozen = output / "selection_frozen_before_test.json"
             self.assertEqual(len(json.loads(frozen.read_text())), 2)
             comparisons = pd.read_csv(output/"comparison.csv")
-            self.assertEqual(len(comparisons), 10)
+            self.assertEqual(len(comparisons), 14)
             self.assertEqual(json.loads((output/"failures.json").read_text()), [])
+            audit = subprocess.run([sys.executable, str(ROOT/"run.py"), "--config", str(config_file),
+                                    "--selection-audit", str(output)], capture_output=True, text=True, timeout=120)
+            self.assertEqual(audit.returncode, 0, audit.stdout+audit.stderr)
+            self.assertTrue(next((root/"results").glob("selection_audit_*/selection_policy_development.json")).is_file())
             self.assertTrue(all(f.stat().st_mtime >= frozen.stat().st_mtime for f in output.glob("series/*/predictions.csv")))
             artifact = next(output.glob("series/*/model.joblib"))
             new = root / "new.csv"
@@ -58,7 +62,7 @@ class SyntheticPipeline(unittest.TestCase):
             predicted = next((root/"results").glob("predict_*/predictions.csv"))
             self.assertEqual(len(pd.read_csv(predicted)), 10)
 
-    def test_five_methods_finish_and_saved_model_can_predict(self):
+    def test_seven_methods_finish_and_saved_model_can_predict(self):
         config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
         config.update(windows=[8], alphas=[1.0], horizon_sets=[[1], [1, 4]],
                       threshold_quantiles=[.99], adaptation=[False, True],
@@ -78,7 +82,7 @@ class SyntheticPipeline(unittest.TestCase):
             output = root / "result"
             records = search_series(path, path.name, windows, config, output)
             self.assertEqual({r["family"] for r in records},
-                             {"recent_mean", "seasonal_naive", "rolling_median_mad", "ridge_single", "ridge_multi"})
+                             {"recent_mean", "seasonal_naive", "rolling_median_mad", "ridge_single", "ridge_multi", "boosted_forecast", "pattern_hybrid"})
             self.assertEqual(sum(r["selected_on_validation"] for r in records), 1)
             self.assertTrue(all(r["eligible_points"] == 90 for r in records))
             self.assertTrue((output / "chart.html").is_file())
@@ -89,9 +93,9 @@ class SyntheticPipeline(unittest.TestCase):
             self.assertEqual(predictions.shape, (600, len(bundle["model"].horizons)))
             self.assertTrue(np.isfinite(predictions[-1]).all())
             trials = pd.read_csv(output / "experiment_log.csv")
-            self.assertEqual(len(trials), 120)
+            self.assertEqual(len(trials), 168)
             self.assertTrue(trials.groupby("candidate").fold.nunique().eq(3).all())
-            self.assertEqual(bundle["format_version"], 2)
+            self.assertEqual(bundle["format_version"], 3)
 
 
 if __name__ == "__main__":

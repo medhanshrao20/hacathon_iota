@@ -36,12 +36,24 @@ def prediction_frame(timestamps, values, observed, predictions, replay, model, t
         frame[f"squared_error_h{horizon}"] = frame[f"error_h{horizon}"] ** 2
         frame[f"score_h{horizon}"] = replay["z"][:, column]
     frame["threshold_exceeded_without_incident"] = frame["raw_threshold_exceeded"] & ~replay["flag"]
+    for column, name in enumerate(model.auxiliary_names):
+        frame[name] = replay["auxiliary_scores"][:, column]
+        frame[f"score_{name}"] = replay["z"][:, len(model.horizons) + column]
     evidence = []
     for i in range(n):
         if not scored[i]:
             evidence.append("Missing observation or insufficient forecast history")
             continue
         dominant = int(np.argmax(replay["z"][i]))
+        if dominant >= len(model.horizons):
+            name = model.auxiliary_names[dominant - len(model.horizons)]
+            evidence.append(
+                f"{name}: distance from training normal patterns "
+                f"{frame[name].iloc[i]:.6g}; normalized score {replay['score'][i]:.4g} "
+                f"versus threshold {threshold:.4g}. "
+                "Label includes incident rules; novelty does not establish a root cause."
+            )
+            continue
         horizon = model.horizons[dominant]
         evidence.append(
             f"h={horizon}: observed {values[start+i]:.6g}; expected "
@@ -104,7 +116,7 @@ table{{border-collapse:collapse}}td,th{{padding:8px;border:1px solid #ddd}}a{{co
 <h1>Sentinel experiment report</h1>
 <p>Each series winner was selected on chronological development folds or other-source-group development data.
 All selections were frozen before test replay. The public test was inspected during v1 development;
-v2 results are exploratory, not a fresh independent benchmark. Test results did not choose the winner.
+These repeat-test results are exploratory, not a fresh independent benchmark. Test results did not choose the winner.
 These are local event metrics, not organizer-certified scores. Predictions are streaming-causal;
 forecast computation is batched, so reported throughput is not a per-window latency benchmark.</p>
 <h2>Test comparison</h2>{aggregate.to_html(index=False)}

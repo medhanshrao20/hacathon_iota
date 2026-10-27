@@ -61,3 +61,17 @@ error ranges and interpretable alerts. We evaluate these methods on NAB."
 Do not describe the cited baseline, horizon ensemble idea or Ridge regression
 as an original algorithm. Do not describe this project as an exact reproduction
 of the paper's foundation-model results.
+
+## v3 implementation references
+
+The added tree and nearest-neighbor methods use established scikit-learn
+implementations; they are not claimed as methods introduced by the paper.
+
+- [Histogram gradient boosting regressor](https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html):
+  CPU nonlinear forecasting; fixed rounds with early_stopping=False.
+- [NearestNeighbors](https://scikit-learn.org/1.6/modules/generated/sklearn.neighbors.NearestNeighbors.html):
+  distance to a bounded, training-only reference of normal windows.
+
+The hybrid's shape/variation channels are our engineering combination of
+standard features and nearest-neighbor distances. They are not an exact matrix
+profile implementation or a foundation-model reproduction.

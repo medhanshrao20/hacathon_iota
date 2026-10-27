@@ -1,0 +1,8 @@
+# Compatibility pins selected here; the paper did not publish a complete lock.
+numpy==1.25.2
+pandas==2.2.3
+momentfm==0.1.4
+pyod==2.0.5
+torch==2.0.1
+scikit-learn==1.6.1
+scipy==1.15.3

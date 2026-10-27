@@ -1,0 +1,5 @@
+# Keep the original TimesFm/TimesFmHparams API, rather than TimesFM 2.5.
+numpy==1.26.4
+pandas==2.2.3
+timesfm[torch]==1.3.0
+torch==2.5.1

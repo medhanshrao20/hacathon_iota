@@ -1,0 +1,22 @@
+{
+  "prepared_series": 58,
+  "prepared_readings": 365509,
+  "upstream_files_byte_verified": 48,
+  "synthetic_tests_passed": 4,
+  "last_synthetic_suite_seconds": 25.04,
+  "verified_dependency_imports": [
+    "metrics",
+    "moment"
+  ],
+  "other_model_dependencies_require_setup": [
+    "chronos",
+    "timesfm",
+    "timemoe"
+  ],
+  "pretrained_models_loaded": false,
+  "NAB_inference_run": false,
+  "full_paper_bitwise_reproduction_claimed": false,
+  "scope_notes": "README.md",
+  "entry_point": "run.py",
+  "default_configurations": 48
+}

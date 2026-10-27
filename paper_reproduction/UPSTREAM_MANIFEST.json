@@ -1,0 +1,338 @@
+[
+  {
+    "path": "upstream/LICENSE",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "LICENSE",
+    "sha256": "7940732ef5782bbab5e2f94dfdfd6da63a57281e4db902ae7e3f0fbfff0087db"
+  },
+  {
+    "path": "upstream/README.md",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "README.md",
+    "sha256": "a544941961c3692f86e28fbac3e144a761cea6ac4f2adf77e27f032072337221"
+  },
+  {
+    "path": "upstream/notebooks/README.md",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/README.md",
+    "sha256": "bb2c3ce7c1608d94ff5b178478a0c390033af4e466fd5aad36229c3aaae8aaa8"
+  },
+  {
+    "path": "upstream/notebooks/boxplot_and_correlation_forecasting_based.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/boxplot_and_correlation_forecasting_based.ipynb",
+    "sha256": "ecb31168ead27093a9249a3ea02d8dd85abb3bd416eb9e1b7cf9c93efbcc94fc"
+  },
+  {
+    "path": "upstream/notebooks/case_study.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/case_study.ipynb",
+    "sha256": "5edefd2a1ba656bed420b503ac0a3df5a57903bdabecebe5d676f5e49a1e7708"
+  },
+  {
+    "path": "upstream/notebooks/comparison_with_non-tsfm_methods.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/comparison_with_non-tsfm_methods.ipynb",
+    "sha256": "5c6ff3e18536daa835dec13426dae2d54438d5b8462f9b917135131f3e68132e"
+  },
+  {
+    "path": "upstream/notebooks/embedding_based_TSAD/analysis.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/embedding_based_TSAD/analysis.ipynb",
+    "sha256": "75b0bfaa50ca9b754ee200b2eacbf5ae24055ea52aa7913ede4f7eae951695eb"
+  },
+  {
+    "path": "upstream/notebooks/embedding_based_TSAD/figure.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/embedding_based_TSAD/figure.ipynb",
+    "sha256": "57623155f6f6a83253f0d95c6cfd3502e06da19cfc6993c1342332946f8bcbc7"
+  },
+  {
+    "path": "upstream/notebooks/embedding_based_TSAD/requirements.txt",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/embedding_based_TSAD/requirements.txt",
+    "sha256": "82a4b49faf42aca5e928ee25daa47f8150b021cc488125e85af83a76cb2aa605"
+  },
+  {
+    "path": "upstream/notebooks/horizons_analysis.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/horizons_analysis.ipynb",
+    "sha256": "ef238bdda29e94f1bd4bcb09f7ac8fb88518e49f2f51774ff29c6e194d9c4be5"
+  },
+  {
+    "path": "upstream/notebooks/horizons_case_study.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/horizons_case_study.ipynb",
+    "sha256": "9cc72cdf3bccd46c9320dee4419e1cec947b61d4dbd6d939a46f48d12ad80143"
+  },
+  {
+    "path": "upstream/notebooks/horizons_ensemble.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/horizons_ensemble.ipynb",
+    "sha256": "3296747068c743f739228ce801d915cc190bb1eab2cd563b84edf78ad84fa3bc"
+  },
+  {
+    "path": "upstream/notebooks/mase_analysis_forecasting_based.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/mase_analysis_forecasting_based.ipynb",
+    "sha256": "4420b9aea78de129347c3f525bef15098d800bc50917e72fc3addcf1a521b775"
+  },
+  {
+    "path": "upstream/notebooks/mse_analysis_moment.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/mse_analysis_moment.ipynb",
+    "sha256": "8b670cf5058e108ba860ce2340f06e715b53810ccd2a860dc55db78e69e2ffc8"
+  },
+  {
+    "path": "upstream/notebooks/one-to-one_comparison.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/one-to-one_comparison.ipynb",
+    "sha256": "c53c5a511f9bc9fc2ead177a3d4851e8d5e8d6393e110ee0daeef50053757705"
+  },
+  {
+    "path": "upstream/notebooks/statistical_analysis_forecasting_based.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/statistical_analysis_forecasting_based.ipynb",
+    "sha256": "5e0c840711201d920d1e58fd96efac3e81644d55aabef6711516c38de3bcf699"
+  },
+  {
+    "path": "upstream/notebooks/statistical_analysis_reconstruction_based.ipynb",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "notebooks/statistical_analysis_reconstruction_based.ipynb",
+    "sha256": "67da94e14967ed21a41ee18079712c185417f2a018987b25e873c75b038bd2b2"
+  },
+  {
+    "path": "upstream/scripts/evaluate_anomaly_scores.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/evaluate_anomaly_scores.py",
+    "sha256": "8f2e8275275e6dcbcaa08297de314dd522a4989c13b7afbefad3750d85e6b3bb"
+  },
+  {
+    "path": "upstream/scripts/evaluate_anomaly_scores_horizons.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/evaluate_anomaly_scores_horizons.py",
+    "sha256": "9612201177556cfa3ef658120bce6962405a788345c19f0b3713791eb16c4813"
+  },
+  {
+    "path": "upstream/scripts/evaluate_baselines.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/evaluate_baselines.py",
+    "sha256": "d6caec291f0de736790667211730964174bf708e5d652ffd3a9191fdb3b7bf2a"
+  },
+  {
+    "path": "upstream/scripts/evaluate_baselines_ensemble.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/evaluate_baselines_ensemble.py",
+    "sha256": "eb035ff23570a413d188711102cdb60e29a0c3bda3ae62b2447ff046ccfb7c5d"
+  },
+  {
+    "path": "upstream/scripts/long_horizon_predictions_to_scores.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/long_horizon_predictions_to_scores.py",
+    "sha256": "3902529a89216a84e3022455d320046a5a8ce12040e360e5986021d9233f9744"
+  },
+  {
+    "path": "upstream/scripts/run_tsfm_on_eva.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "scripts/run_tsfm_on_eva.py",
+    "sha256": "206eeebdb74b0aedb945c46c6e55f108cac87cd85f7bd3f7fa3c26edba5cba35"
+  },
+  {
+    "path": "upstream/tsfms/chronos_long_horizon.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/chronos_long_horizon.py",
+    "sha256": "ab71a9e532680001d2f13dd05934d46b5847e7f08707865dfb90a916001f8fd9"
+  },
+  {
+    "path": "upstream/tsfms/chronos_zs.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/chronos_zs.py",
+    "sha256": "47de41d69cad7abde03925126d6c9e2f03188280f1833c4c167cb6560aa23d00"
+  },
+  {
+    "path": "upstream/tsfms/helper.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/helper.py",
+    "sha256": "821b792949660afababcb597cc7ab7425ec4cc436e218433d38a5774f4873c9a"
+  },
+  {
+    "path": "upstream/tsfms/moment_zs.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/moment_zs.py",
+    "sha256": "1d9799cd09f9d02f4049e5eb4a090000e1f59c2f3c3d3c82d3f48a3c9148a68b"
+  },
+  {
+    "path": "upstream/tsfms/moment_zs_global_z.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/moment_zs_global_z.py",
+    "sha256": "c46a3b9c05b7f16e4c406c2fe31d3407b266f4e9cdd83fce5d70c6f86ae21250"
+  },
+  {
+    "path": "upstream/tsfms/moment_zs_minmax.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/moment_zs_minmax.py",
+    "sha256": "8b470f7bfd76f1ab371d8c14e88f2ac7e46a566435cc19c69090ec4a7ce93333"
+  },
+  {
+    "path": "upstream/tsfms/time-moe.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/time-moe.py",
+    "sha256": "003147cfe41b79c38449b8254482714b1bb982e4db5c9d463d3dcb2b5f852524"
+  },
+  {
+    "path": "upstream/tsfms/time-moe_global_z.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/time-moe_global_z.py",
+    "sha256": "eb51c32fa3e014802dad40d58d9742a1a5cdab8da02fd3083df89e12b391c4d3"
+  },
+  {
+    "path": "upstream/tsfms/time-moe_minmax.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/time-moe_minmax.py",
+    "sha256": "150d1d15e0321a1bde1b20b5d182f771d9bd8a1dfec2ce14c8c13c348d162937"
+  },
+  {
+    "path": "upstream/tsfms/times_fm.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/times_fm.py",
+    "sha256": "6ac9284c2d7b79f20b4504f8a7c7c6e690bb956a65f4945cfdb6eaa50e5c3e12"
+  },
+  {
+    "path": "upstream/tsfms/times_fm_global_z.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/times_fm_global_z.py",
+    "sha256": "681fa9c487dbad03b72d37bb92454e222528eeee492a3ee7bb35d1218881a8bb"
+  },
+  {
+    "path": "upstream/tsfms/times_fm_long_horizon.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/times_fm_long_horizon.py",
+    "sha256": "06b0cc85996870ea81ea0d5bb72a2b30976094fbb4d147f6252f8f4bbd84baae"
+  },
+  {
+    "path": "upstream/tsfms/times_fm_minmax.py",
+    "source": "https://gitlab.kuleuven.be/m-group-campus-brugge/dtai_public/publications/iclr2026_timeseriesfoundationmodelsad",
+    "commit": "dcbbd9fbeaabfb27ad084ffa4351a2418ea1dab9",
+    "upstream_path": "tsfms/times_fm_minmax.py",
+    "sha256": "3934b393af825020fd434a6cc7125c7ae1eeffed70b2beeda37fde26a18ceca5"
+  },
+  {
+    "path": "third_party/LICENSE",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "third_party/TSB_AD/__init__.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/__init__.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/__init__.py",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/__init__.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/__init__.py",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/_affiliation_zone.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/_affiliation_zone.py",
+    "sha256": "3b289bf11cebe614afabe353c873de90ba9debf8831aef8f73532870dce01ba2"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/_integral_interval.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/_integral_interval.py",
+    "sha256": "8177e69eccb0ae4ea76b2f54f6799ae61758b5a103603fae3d1a3a8d331e7cda"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/_single_ground_truth_event.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/_single_ground_truth_event.py",
+    "sha256": "a04b5daa0fb0ef68893807c7ab5d4353b43f0d5231ae06ef0006b2e6cf939165"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/generics.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/generics.py",
+    "sha256": "16743b204d24feb8ba9deaabceb7b0cf900520136e8a3b77e499448fcaafbfc9"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/affiliation/metrics.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/affiliation/metrics.py",
+    "sha256": "9fe83cd2cb1cd4b1b3c7869971e94a18d5ea71b4103f88e347de70c8330cc060"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/basic_metrics.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/basic_metrics.py",
+    "sha256": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/metrics.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/metrics.py",
+    "sha256": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d"
+  },
+  {
+    "path": "third_party/TSB_AD/evaluation/visualize.py",
+    "source": "https://github.com/TheDatumOrg/TSB-AD",
+    "commit": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+    "upstream_path": "TSB_AD/evaluation/visualize.py",
+    "sha256": "ef059194fb08e4bff532510372cba963a65c911a538c617b47ab0069dedb948e"
+  }
+]

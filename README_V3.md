@@ -1,3 +1,21 @@
+
+# Create venv
+python -m venv .venv
+# Activate on Windows PowerShell:
+.\.venv\Scripts\Activate.ps1
+# (Or on Linux / macOS: source .venv/bin/activate)
+
+# Install base launcher dependencies
+pip install -r paper_reproduction/requirements.txt
+# Set up the isolated environments for all model families (MOMENT, Chronos, TimesFM, Time-MoE)
+python paper_reproduction/run.py --setup
+
+
+
+
+
+
+
 # Historical v3 guide
 
 Use run.py --config config_v3.json for this workflow. The default is now v4.
